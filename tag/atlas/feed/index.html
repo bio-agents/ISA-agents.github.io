@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Atlas &#8211; ISA agents</title>
+	<atom:link href="tag/atlas/feed/" rel="self" type="application/rss+xml" />
+	<link>http://isa-agents.org</link>
+	<description>Standardizing metadata for scientific experiments</description>
+	<lastBuildDate>Thu, 19 Apr 2018 15:23:29 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.5</generator>
+<site xmlns="com-wordpress:feed-additions:1">113852667</site>	<item>
+		<title>Compared to what? The ArrayExpress Atlas.</title>
+		<link>http://isa-agents.org/2011/09/compared-to-what-the-arrayexpress-atlas/</link>
+		<comments>http://isa-agents.org/2011/09/compared-to-what-the-arrayexpress-atlas/#comments</comments>
+		<pubDate>Mon, 05 Sep 2011 10:23:43 +0000</pubDate>
+		<dc:creator><![CDATA[isaagents]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Ontologies]]></category>
+		<category><![CDATA[Web]]></category>
+		<category><![CDATA[ArrayExpress]]></category>
+		<category><![CDATA[Atlas]]></category>
+
+		<guid isPermaLink="false">http://isaagents.wordpress.com/?p=250</guid>
+		<description><![CDATA[This is intended to be a constructive criticism of a resource which I believe to have the potential to be powerful and useful. Any of you who have read Edward Tufte&#8217;s essay on Visual and Statistical Thinking: Displays of Evidence for Making Decisions will instantly recognise this question&#8230;compared to what? We see many examples in [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>This is intended to be a constructive criticism of a resource which I believe to have the potential to be powerful and useful.</p>
+<p>Any of you who have read <strong>Edward Tufte&#8217;s essay on Visual and Statistical Thinking: Displays of Evidence for Making Decisions</strong> will instantly recognise this question&#8230;compared to what? We see many examples in the biological world, and I&#8217;ll focus specifically on one resource here&#8230;the <strong><a href="http://www.ebi.ac.uk/gxa/">ArrayExpress Atlas</a></strong>. <em>First, a disclaimer: I used to work in the group who developed this resource, and have aired my criticisms many years ago to no avail. And not only me, senior researchers have raised the same questions even before the resource was developed, but all suggestions have up to now been ignored.</em></p>
+<p>Here, I will only give food for thought about what is presented in the Atlas since some people don&#8217;t seem to understand that what is presented doesn&#8217;t actually make much sense. This is mostly caused by a failure to answer the<strong> compared to what</strong> question&#8230;a particularly important question for a resource which is comparing gene expression levels would you not say?</p>
+<p><em><strong>Some examples:</strong></em></p>
+<p><strong>The heatmap</strong><br />
+A query on the resource, such as <a href="http://www.ebi.ac.uk/gxa/qrs?fact_0=organism_part&amp;fexp_0=UP_DOWN&amp;fmex_0=1&amp;fval_0=liver+&amp;view=hm">this</a> will yield a result like so:</p>
+<p><a href="https://isa-agents.org/wp-content/uploads/2011/09/screen-shot-2011-09-05-at-10-34-04.png"><img class="aligncenter size-full wp-image-251" title="Screen shot 2011-09-05 at 10.34.04" src="https://isa-agents.org/wp-content/uploads/2011/09/screen-shot-2011-09-05-at-10-34-04.png?resize=422%2C513" alt="" width="422" height="513" data-recalc-dims="1" /></a></p>
+<p>My first thought would be that this heat map is telling me that <strong>Fah</strong> was<strong> up regulated in liver 31 times</strong> and once in some obscure string seemingly encompassing every organism in the human body (I&#8217;ll get to my criticism about these factor representations later). Now, the second question that any self-respecting investigator would ask is compared to what? Is this saying that it is up regulated compared to normal tissue, diseased tissue or all tissue across all organisms? Actually, we don&#8217;t know. And there is nothing to say what is being shown here. Moreover, what does it mean to say up and down regulated. Surely it depends. You can&#8217;t just present discrete variables, one needs to show the statistical meaning of such suggestions&#8230;i.e. show the P value of up/down regulations since not all may be meaningful to a biologist/statistician even though they may well be to guys in the ArrayExpress Atlas team.</p>
+<p>Another small point on this is that if this value is dependent on database contents rather than baseline expression levels (whatever they are supposed to be), then if my database contains more liver samples than anything else, and expression levels are calculated relative to this content, my results will be skewed. Either a disclaimer should be presented on the site, or they should make the comparison metrics used more obvious.</p>
+<p><strong>The expression profiles &amp; factor display</strong></p>
+<p>Based on this <a href="http://www.ebi.ac.uk/gxa/gene/ENSMUSG00000030630">page</a>.</p>
+<p><a href="https://isa-agents.org/wp-content/uploads/2011/09/screen-shot-2011-09-05-at-10-51-03.png"><img class="aligncenter size-full wp-image-253" title="Screen shot 2011-09-05 at 10.51.03" src="https://isa-agents.org/wp-content/uploads/2011/09/screen-shot-2011-09-05-at-10-51-03.png?resize=600%2C337" alt="" width="600" height="337" data-recalc-dims="1" /></a>Look at this graph, and tell me what the Y-Axis represents. First of all, even if what they are trying to represent was meaningful, it would still be pretty useless. Let me explain. They have split up variables which are supposed to be related into 3 different tabs, with variables which make NO sense. What does it mean to show time as a variable. Time of what? Sampling time, the length of time an organism was exposed to a compound&#8230;what? Exactly, nothing. It means nothing to show time like this. What does it mean to show dose as a seemingly independent variable. Dosage is no good without a compound. What does make sense and can at least possibly allow one to ask the question<strong> &#8220;compared to what?&#8221;</strong>  is to show <strong>growth factor beta 1 and 5 ng/ml after 1 hour</strong> as one factor, and show the expression levels then (even though we still don&#8217;t know what the Y axis means). You can look at any experiment in the Atlas and find the same problems.</p>
+<p><strong>The cluster effect</strong></p>
+<p>All people, even those not in the realm of statistics need to understand the importance of the cluster effect. I.e. do I only get over expression of one or more genes when another gene is expressed/under expressed. Transcription networks are indeed networks. There are feedback loops, both positive and negative, and a lot is known about these loops already. So, why are these not taken into account when calculating statistics in the Atlas? For such cases, presenting mutually exclusive P-values of individual genes is not really enough and the clustering effects should be taken into account more so as to adjust the P-value to more realistic sizes.</p>
+<p><strong>Summary</strong></p>
+<p>I have presented my thoughts on the ArrayExpress Atlas publicly and internally beforehand, but this is the first time I&#8217;m airing it to the public domain. I hope now that something is done to fix this resource since I still believe it to have the potential to be cool and really helpful.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://isa-agents.org/2011/09/compared-to-what-the-arrayexpress-atlas/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">250</post-id>	</item>
+	</channel>
+</rss>

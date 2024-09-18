@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>JBoss &#8211; ISA agents</title>
+	<atom:link href="tag/jboss/feed/" rel="self" type="application/rss+xml" />
+	<link>http://isa-agents.org</link>
+	<description>Standardizing metadata for scientific experiments</description>
+	<lastBuildDate>Thu, 19 Apr 2018 15:23:29 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.5</generator>
+<site xmlns="com-wordpress:feed-additions:1">113852667</site>	<item>
+		<title>Getting up and running with the BII Web Application</title>
+		<link>http://isa-agents.org/2013/08/getting-up-and-running-with-the-bii-web-application/</link>
+		<comments>http://isa-agents.org/2013/08/getting-up-and-running-with-the-bii-web-application/#comments</comments>
+		<pubDate>Thu, 29 Aug 2013 11:27:08 +0000</pubDate>
+		<dc:creator><![CDATA[isaagents]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[BioInvIndex]]></category>
+		<category><![CDATA[Installation guide]]></category>
+		<category><![CDATA[JBoss]]></category>
+
+		<guid isPermaLink="false">http://isaagents.wordpress.com/?p=636</guid>
+		<description><![CDATA[In true Star Wars fashion, we are bringing you the prequel to the last blog post discussing how to set up data file access from your JBoss installation. In this post we&#8217;ll discuss how to set up the BioInvestigation web application, from build to deployment. 1. Getting Ready First, you&#8217;ll need to have a Java [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>In true Star Wars fashion, we are bringing you the prequel to the <a href="http://isaagents.wordpress.com/2013/08/23/configuring-links-to-data-files-in-the-bii-web-app-in-jboss-5-x/">last blog post </a>discussing how to set up data file access from your JBoss installation. In this post we&#8217;ll discuss how to set up the BioInvestigation web application, from build to deployment.</p>
+<h2></h2>
+<h2>1. Getting Ready</h2>
+<ul>
+<li>First, you&#8217;ll need to have a <strong>Java</strong> installed.</li>
+<li>Then you&#8217;ll need to download <strong>Maven</strong>, this is what automates the build process for the BII web application. A bit like Ant, but it adds dependency management, meaning no need for pesky lib directories. Why this version I hear you ask? Well for some silly reason, the Maven developers (as great as they are) thought that removing the ability to specify profiles in profiles.xml was a great idea. We don&#8217;t think it is. In Maven 3+ you can only specify profiles in the pom.xml file or in the settings.xml file under the .m2 directory on your system. So, use version 2.2.1. We&#8217;ll move on to configuring these profiles a little later.</li>
+<li>Now you need <strong>Git</strong> which we&#8217;ll use to get the latest BII codebase from GitHub. If you haven&#8217;t heard of Git, you simply haven&#8217;t lived. Get out from underneath that SVN rock and join the Git revolution. It&#8217;s worth migrating just for the benefit of GitHub or some other funky equivalent (BitBucket or Launchpad).</li>
+<li>Next, download <strong>JBoss</strong> 5.1.0 from <a title="here" href="http://isaagents.wordpress.com/2013/08/23/configuring-links-to-data-files-in-the-bii-web-app-in-jboss-5-x/">http://sourceforge.net/projects/jboss/files/JBoss/JBoss-5.1.0.GA</a> and move the JBoss directory to somewhere to your liking. For further examples, let&#8217;s say that&#8217;s <em>/etc/jboss-5.1.0.GA/ </em>for the rest of this post.</li>
+<li>Finally, if you want to deploy properly, you&#8217;ll need a database. The BII works with Oracle, Postgres, MySQL or MariaDB. You can also run the application just for using the H2 database (we use this for testing). If your database of choice (apart from H2), you&#8217;ll need to create a database (we usually name it bioinvindex) and a user (it&#8217;s always a good idea to not just use root as the user) and grant that user all permissions to the database.</li>
+</ul>
+<h2></h2>
+<h2>2. Grabbing the code</h2>
+<p>With everything in place, you need to &#8216;clone&#8217; the BioInvIndex repository from GitHub. So navigate to a directory of your choosing, and via the command line type &#8216;git clone https://github.com/ISA-agents/BioInvIndex.git&#8217;. This will create a BioInvIndex directory for you with all the code inside.</p>
+<h2>3. Configure your profiles</h2>
+<p>I mentioned earlier about Maven and profiles. In the bioinvindex directory just created for you, you&#8217;ll see a profiles.xml file. Not to get too bogged down on details about what these profiles are for, I&#8217;ll give a brief explanation. The main pom.xml file (Project Object Model) for maven defines a number of dependencies, or libraries that are required for the application to run. Some of these dependencies are not always known in advance. For example, if I am running an application on MariaDB, why would I want to have Oracle and Postgres libraries in the final EAR (Enterprise Archive, the JBoss answer to WAR files in Tomcat)? The Profiles just allow us to automatically inject some properties in to the pom file on build depending on what the person building it wants to run. Some of these profiles also go towards creating the hibernate.properties file required by hibernate for connection to the database or in specifying to the application the whereabouts of the Lucene index (will talk more about that in a bit).</p>
+<p>So now, given you have some context, open profiles.xml up and you&#8217;ll find a number of individual &#8216;profile&#8217; elements for the various database installations and a few for the Lucene index locations.</p>
+<p>First, find the profile matching your database and edit the username and password, database name (if not bioinvindex), URL and any version information, etc.</p>
+<p>Then, modify the index profiles (named index_local and index_deploy) that specify where the Lucene index for the BII web app will reside. The Lucene index is used to speed up the web application, massively reducing the number of database queries that are required. The majority of the web application front end is based on the contents of the Lucene index. Make sure that the application has read/write access to that location.</p>
+<h2></h2>
+<h2>4. Build!</h2>
+<p>Run the command <em>mvn clean package -Dmaven.test.skip=true -Pdeploy,&lt;your_database_profile&gt;,&lt;your_index_profile&gt;</em></p>
+<p>So, if I was deploying using mysql and using the index_deploy profiles, I would run</p>
+<p>mvn clean package -Dmaven.test.skip=true -Pdeploy,mysql,index_deploy</p>
+<p>Now watch the build succeed. When it completes, look in ear/target/ and you&#8217;ll see bii-x.y.ear where x and y are the major and minor versions respectively. The ear, or enterprise archive is what you&#8217;ll be deploying. Copy this file in to your JBoss directory, so given we&#8217;ve copied the JBoss installation files to /etc/jboss-5.1.0.GA/, we&#8217;d copy the ear to <em>/etc/jboss-5.1.0.GA/server/default/deploy/</em></p>
+<h2>5. Run the web application</h2>
+<p>Finally, we want to actually run our application. The next step will rely solely on JBoss. navigate to /etc/jboss-5.1.0.GA/bin/ and you&#8217;ll see a number of scripts. The only one you need worry about is run.sh &#8211; to run JBoss using the default server (that&#8217;s where we copied the ear to), execute the following command &#8211; <strong><span style="color: #3366ff;"><em>./run.sh -c default -b 0.0.0.0</em><em> &amp;</em></span></strong> the last bit will bind the server to address 0.0.0.0, so it&#8217;ll be visible to the outside world and will run on port 8080 by default. You can change the port by following the guidance in this <a href="http://stackoverflow.com/questions/3446400/jboss-5-changing-default-port" target="_blank">Stackoverflow post</a>.</p>
+<p><a href="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-29-at-13-25-48.png"><img id="i-653" class="size-full wp-image" src="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-29-at-13-25-48.png?w=625" alt="Image" data-recalc-dims="1" /></a></p>
+<p>Hopefully everything will start running, and the bii ear will be deployed and you&#8217;ll be able to see it at <a href="http://localhost:8080/bioinvindex" target="_blank">http://localhost:8080/bioinvindex</a>. You will see errors in the startup log, but that&#8217;s because nothing exists in our database yet&#8230;there are no tables present at this point. We&#8217;ll create the database next.</p>
+<h2>6. Set up the database</h2>
+<p>For this, you&#8217;ll need the BII Manager. You can download this from <a href="http://isatab.sourceforge.net/agents.html" target="_blank">http://isatab.sourceforge.net/agents.html</a>. The latest version (1.6.1) is available <a href="https://bitbucket.org/eamonnmag/isaagents-downloads/downloads/BII-data-mgr-1.6.1.zip" target="_blank">here</a>.</p>
+<p>Unzip it and you&#8217;ll have a BII-Data-Manager-x.y directory with some files in it. We&#8217;ll need to configure some things before we start:</p>
+<ol>
+<li>Firstly, the database connection information. Open up the <strong>hibernate.properties</strong> file under the config/ directory and copy in the same username, password, database URL, index location, etc. as you entered in the profiles.xml for the BII web application.</li>
+<li>Next, you may want to set up <strong>data-locations.xml</strong>. Data locations tell the manager agent where to copy data files and ISA-Tab files as well as the URL the web application will be able to access them from. More information on the set up of JBoss to point to these data directories is available in a <a href="http://isaagents.wordpress.com/2013/08/23/configuring-links-to-data-files-in-the-bii-web-app-in-jboss-5-x/" target="_blank">previous blog post</a>.</li>
+</ol>
+<p>Now, we&#8217;re ready to go. If you are using MySQL, H2, MariaDB or Postgres, you&#8217;ll be able to run the application by just double clicking isa_deps.jar or executing <strong>./run.sh</strong> from the command line.</p>
+<p>If you are using Oracle, you will need to add the Oracle driver on the classpath. Edit the run.sh file to do this then when ready, from the command line, run <strong>./run.sh.</strong></p>
+<p>When the application starts, you&#8217;ll be presented with a log in screen. At this point, create a curator account. When this is done for the first time and the database has no schema available, the application will automatically create the schema via Hibernate (a fantastic agent). So you&#8217;ve nothing to do. Then, when that&#8217;s completed successfully (if it doesn&#8217;t check your hibernate.properties entries), you&#8217;ll be able to log in and load content.</p>
+<p>Finally, to make things a bit faster, open up your <strong>hibernate.properties</strong> file having used the data manager for the first time and delete the line</p>
+<p><em>hibernate.hbm2ddl.auto=update</em></p>
+<p>This will stop the checking of the schema every time a connection is opened.</p>
+<p>That&#8217;s it! Let us know if we missed anything, and we&#8217;ll update this post.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://isa-agents.org/2013/08/getting-up-and-running-with-the-bii-web-application/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">636</post-id>	</item>
+		<item>
+		<title>Configuring Links to data files in the BII web app in JBoss 5.x</title>
+		<link>http://isa-agents.org/2013/08/configuring-links-to-data-files-in-the-bii-web-app-in-jboss-5-x/</link>
+		<comments>http://isa-agents.org/2013/08/configuring-links-to-data-files-in-the-bii-web-app-in-jboss-5-x/#comments</comments>
+		<pubDate>Fri, 23 Aug 2013 15:50:58 +0000</pubDate>
+		<dc:creator><![CDATA[isaagents]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[BioInvIndex]]></category>
+		<category><![CDATA[Data Files]]></category>
+		<category><![CDATA[JBoss]]></category>
+		<category><![CDATA[Static Content]]></category>
+
+		<guid isPermaLink="false">http://isaagents.wordpress.com/?p=588</guid>
+		<description><![CDATA[We have been getting asked a lot about general deployment within the ISA agents suite, particularly with respect to the web application, which can look a little complex. Here I&#8217;m going to describe one of the more perplexing tasks when setting up JBoss: how do I configure JBoss to serve up static content, i.e. my [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>We have been getting asked a lot about general deployment within the ISA agents suite, particularly with respect to the web application, which can look a little complex. Here I&#8217;m going to describe one of the more perplexing tasks when setting up JBoss: how do I configure JBoss to serve up static content, i.e. my data files. I will also cover how to set up the URLs in data-locations.xml (for the BII Manager agent) to automatically place your files in this directory.</p>
+<p><strong>Setting up JBoss to serve out files</strong></p>
+<p>Probably the most annoying part of setting up JBoss is telling JBoss to serve out your data files from the web application. For instance, the BII data manager agent has sent the files to <em>/tmp/data/bii/</em> on my file system and I want the URL <em>http://localhost/data</em> to point to that directory. There are a number of ways you can do this. You can use Apache or nginx to do this, you could change your data directory to be within the ROOT.war directory in your JBoss server directory, or you could do what I&#8217;m suggesting here and do everything through JBoss&#8230;which I think is a bit cleaner, and not so difficult when you know how.</p>
+<p><strong>1.</strong> The first thing to do is modify the profile.xml file found under the server/default/config/bootstrap folder in your JBoss installation.</p>
+<p><a href="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-30-39.png"><img id="i-602" class="size-full wp-image" src="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-30-39.png?w=625" alt="Image" data-recalc-dims="1" /></a></p>
+<p>In profile.xml, there is a bean named <em>BootstrapProfileFactory, </em>you need to modify this and add a value element to the java.net.URI list element. Here, I&#8217;ve added a path to my <em>Downloads</em> directory.</p>
+<p><a href="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-35-18.png"><img id="i-609" class="size-full wp-image" src="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-35-18.png?w=625" alt="Image" data-recalc-dims="1" /></a></p>
+<p><strong>2.</strong> Next, we need to set up a folder in my Downloads directory, which has to have a series of folders following the deploy pattern of  <span style="color: #ff0000;">/server/&lt;profile&gt;/deploy/ <span style="color: #000000;">&#8211; so now, the directory <span style="color: #ff0000;">/Users/eamonnmaguire/Downloads/server/default/deploy/ <span style="color: #000000;">should exist</span></span>. </span></span></p>
+<p><strong>3.</strong> Within the deploy directory, create a <em>data.war </em>directory, and inside that create a WEB-INF directory. The name of the .war directory will dictate the URL, so <em>data.war</em> will correspond to <em>http://localhost/data</em>. In the WEB-INF directory, create an empty web.xml file. It&#8217;s contents will be <em>&lt;web-app&gt;&lt;/web-app&gt; &#8211; </em>Under the /Users/eamonnmaguire/Downloads/server/ I now have the following directory structure.</p>
+<p><a href="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-43-02.png"><img id="i-621" class="size-full wp-image" src="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-43-02.png?w=625" alt="Image" data-recalc-dims="1" /></a></p>
+<p><strong>4. Add your files</strong></p>
+<p>Finally, within your data.war directory, add the files you want to display. Here I&#8217;ve added a PDF for simplicity.</p>
+<p><a href="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-45-41.png"><img id="i-625" class="size-full wp-image" src="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-45-41.png?w=625" alt="Image" data-recalc-dims="1" /></a></p>
+<p>Start up JBoss running ./run.sh -c default and navigate your browser to http://localhost:8080/data/Diagnosis.pdf and I get this lovely page.</p>
+<p><a href="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-46-43.png"><img id="i-628" class="size-full wp-image" src="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-46-43.png?w=625" alt="Image" data-recalc-dims="1" /></a></p>
+<p>That&#8217;s it!</p>
+<p>Now, to configure data-locations.xml. For out ISA-Tab for example, we simply set up the filesystem_path to be where, on our machine we want the files to be distributed. The web_url will be the URL we&#8217;ve just configured that has mapped data to that actual position in the file system.</p>
+<p><a href="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-49-31.png"><img id="i-631" class="size-full wp-image" src="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-49-31.png?w=625" alt="Image" data-recalc-dims="1" /></a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://isa-agents.org/2013/08/configuring-links-to-data-files-in-the-bii-web-app-in-jboss-5-x/feed/</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">588</post-id>	</item>
+	</channel>
+</rss>

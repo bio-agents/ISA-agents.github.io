@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Data Files &#8211; ISA agents</title>
+	<atom:link href="tag/data-files/feed/" rel="self" type="application/rss+xml" />
+	<link>http://isa-agents.org</link>
+	<description>Standardizing metadata for scientific experiments</description>
+	<lastBuildDate>Thu, 19 Apr 2018 15:23:29 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.5</generator>
+<site xmlns="com-wordpress:feed-additions:1">113852667</site>	<item>
+		<title>Configuring Links to data files in the BII web app in JBoss 5.x</title>
+		<link>http://isa-agents.org/2013/08/configuring-links-to-data-files-in-the-bii-web-app-in-jboss-5-x/</link>
+		<comments>http://isa-agents.org/2013/08/configuring-links-to-data-files-in-the-bii-web-app-in-jboss-5-x/#comments</comments>
+		<pubDate>Fri, 23 Aug 2013 15:50:58 +0000</pubDate>
+		<dc:creator><![CDATA[isaagents]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[BioInvIndex]]></category>
+		<category><![CDATA[Data Files]]></category>
+		<category><![CDATA[JBoss]]></category>
+		<category><![CDATA[Static Content]]></category>
+
+		<guid isPermaLink="false">http://isaagents.wordpress.com/?p=588</guid>
+		<description><![CDATA[We have been getting asked a lot about general deployment within the ISA agents suite, particularly with respect to the web application, which can look a little complex. Here I&#8217;m going to describe one of the more perplexing tasks when setting up JBoss: how do I configure JBoss to serve up static content, i.e. my [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>We have been getting asked a lot about general deployment within the ISA agents suite, particularly with respect to the web application, which can look a little complex. Here I&#8217;m going to describe one of the more perplexing tasks when setting up JBoss: how do I configure JBoss to serve up static content, i.e. my data files. I will also cover how to set up the URLs in data-locations.xml (for the BII Manager agent) to automatically place your files in this directory.</p>
+<p><strong>Setting up JBoss to serve out files</strong></p>
+<p>Probably the most annoying part of setting up JBoss is telling JBoss to serve out your data files from the web application. For instance, the BII data manager agent has sent the files to <em>/tmp/data/bii/</em> on my file system and I want the URL <em>http://localhost/data</em> to point to that directory. There are a number of ways you can do this. You can use Apache or nginx to do this, you could change your data directory to be within the ROOT.war directory in your JBoss server directory, or you could do what I&#8217;m suggesting here and do everything through JBoss&#8230;which I think is a bit cleaner, and not so difficult when you know how.</p>
+<p><strong>1.</strong> The first thing to do is modify the profile.xml file found under the server/default/config/bootstrap folder in your JBoss installation.</p>
+<p><a href="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-30-39.png"><img id="i-602" class="size-full wp-image" src="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-30-39.png?w=625" alt="Image" data-recalc-dims="1" /></a></p>
+<p>In profile.xml, there is a bean named <em>BootstrapProfileFactory, </em>you need to modify this and add a value element to the java.net.URI list element. Here, I&#8217;ve added a path to my <em>Downloads</em> directory.</p>
+<p><a href="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-35-18.png"><img id="i-609" class="size-full wp-image" src="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-35-18.png?w=625" alt="Image" data-recalc-dims="1" /></a></p>
+<p><strong>2.</strong> Next, we need to set up a folder in my Downloads directory, which has to have a series of folders following the deploy pattern of  <span style="color: #ff0000;">/server/&lt;profile&gt;/deploy/ <span style="color: #000000;">&#8211; so now, the directory <span style="color: #ff0000;">/Users/eamonnmaguire/Downloads/server/default/deploy/ <span style="color: #000000;">should exist</span></span>. </span></span></p>
+<p><strong>3.</strong> Within the deploy directory, create a <em>data.war </em>directory, and inside that create a WEB-INF directory. The name of the .war directory will dictate the URL, so <em>data.war</em> will correspond to <em>http://localhost/data</em>. In the WEB-INF directory, create an empty web.xml file. It&#8217;s contents will be <em>&lt;web-app&gt;&lt;/web-app&gt; &#8211; </em>Under the /Users/eamonnmaguire/Downloads/server/ I now have the following directory structure.</p>
+<p><a href="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-43-02.png"><img id="i-621" class="size-full wp-image" src="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-43-02.png?w=625" alt="Image" data-recalc-dims="1" /></a></p>
+<p><strong>4. Add your files</strong></p>
+<p>Finally, within your data.war directory, add the files you want to display. Here I&#8217;ve added a PDF for simplicity.</p>
+<p><a href="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-45-41.png"><img id="i-625" class="size-full wp-image" src="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-45-41.png?w=625" alt="Image" data-recalc-dims="1" /></a></p>
+<p>Start up JBoss running ./run.sh -c default and navigate your browser to http://localhost:8080/data/Diagnosis.pdf and I get this lovely page.</p>
+<p><a href="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-46-43.png"><img id="i-628" class="size-full wp-image" src="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-46-43.png?w=625" alt="Image" data-recalc-dims="1" /></a></p>
+<p>That&#8217;s it!</p>
+<p>Now, to configure data-locations.xml. For out ISA-Tab for example, we simply set up the filesystem_path to be where, on our machine we want the files to be distributed. The web_url will be the URL we&#8217;ve just configured that has mapped data to that actual position in the file system.</p>
+<p><a href="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-49-31.png"><img id="i-631" class="size-full wp-image" src="http://isaagents.files.wordpress.com/2013/08/screen-shot-2013-08-23-at-16-49-31.png?w=625" alt="Image" data-recalc-dims="1" /></a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://isa-agents.org/2013/08/configuring-links-to-data-files-in-the-bii-web-app-in-jboss-5-x/feed/</wfw:commentRss>
+		<slash:comments>9</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">588</post-id>	</item>
+	</channel>
+</rss>

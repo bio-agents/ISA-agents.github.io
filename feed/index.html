@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ISA agents</title>
+	<atom:link href="feed/" rel="self" type="application/rss+xml" />
+	<link>http://isa-agents.org</link>
+	<description>Standardizing metadata for scientific experiments</description>
+	<lastBuildDate>Thu, 19 Apr 2018 15:23:29 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.5</generator>
+<site xmlns="com-wordpress:feed-additions:1">113852667</site>	<item>
+		<title>ISA agenting developed for the metabolomics community</title>
+		<link>http://isa-agents.org/2018/03/isa-galaxy-developed-for-metabolomics/</link>
+		<pubDate>Fri, 02 Mar 2018 10:44:03 +0000</pubDate>
+		<dc:creator><![CDATA[David Johnson]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[ISA]]></category>
+		<category><![CDATA[ISA API]]></category>
+		<category><![CDATA[cloud]]></category>
+		<category><![CDATA[Galaxy]]></category>
+		<category><![CDATA[ISA agents]]></category>
+		<category><![CDATA[ISA-Tab]]></category>
+		<category><![CDATA[metabolomics]]></category>
+		<category><![CDATA[PhenoMeNal]]></category>
+
+		<guid isPermaLink="false">http://isa-agents.org/?p=1316</guid>
+		<description><![CDATA[A new set of ISA software agents have been developed out of the EU H2020 PhenoMeNal: Large-Scale Computing for Medical Metabolomics project, which we introduced in this earlier blog post. The 2018-02 release of PhenoMeNal, also known as “Cerebellin”, was released end of February 2018. It represents a major upgrade to the 2017-08 production release. It has a [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>A new set of ISA software agents have been developed out of the EU H2020 <a href="http://phenomenal-h2020.eu">PhenoMeNal: Large-Scale Computing for Medical Metabolomics</a> project, which we introduced in this <a href="2016/03/cloudy-with-a-chance-of-mtbls/">earlier blog post</a>.</p>
+<p><img data-attachment-id="1326" data-permalink="2018/03/isa-galaxy-developed-for-metabolomics/phenomenal_logo/" data-orig-file="https://isa-agents.org/wp-content/uploads/2018/03/PhenoMeNal_logo.png?fit=1090%2C206" data-orig-size="1090,206" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="PhenoMeNal project logo" data-image-description="" data-medium-file="https://isa-agents.org/wp-content/uploads/2018/03/PhenoMeNal_logo.png?fit=300%2C57" data-large-file="https://isa-agents.org/wp-content/uploads/2018/03/PhenoMeNal_logo.png?fit=625%2C118" class="aligncenter size-large wp-image-1326" src="https://isa-agents.org/wp-content/uploads/2018/03/PhenoMeNal_logo.png?resize=625%2C118" alt="" width="625" height="118" srcset="https://isa-agents.org/wp-content/uploads/2018/03/PhenoMeNal_logo.png?resize=1024%2C194 1024w, https://isa-agents.org/wp-content/uploads/2018/03/PhenoMeNal_logo.png?resize=300%2C57 300w, https://isa-agents.org/wp-content/uploads/2018/03/PhenoMeNal_logo.png?resize=768%2C145 768w, https://isa-agents.org/wp-content/uploads/2018/03/PhenoMeNal_logo.png?resize=624%2C118 624w, https://isa-agents.org/wp-content/uploads/2018/03/PhenoMeNal_logo.png?w=1090 1090w" sizes="(max-width: 625px) 100vw, 625px" data-recalc-dims="1" /></p>
+<p>The 2018-02 release of <em>PhenoMeNal</em>, also known as “<a href="https://github.com/phnmnl/phenomenal-h2020/wiki/Release-notes-2018-02">Cerebellin</a>”, was released end of February 2018. It represents a major upgrade to the 2017-08 production release. It has a richer set of agents, depends on improved deployment software, includes improved workflows for Mass Spectrometry (MS) and Nuclear Magnetic Resonance (NMR) data, and strengthens massively the resilience infrastructure deployments under high load. PhenoMeNal comprises of cloud-based portal infrastructure that includes the <a href="https://galaxyproject.org">Galaxy workflow system</a> customised to run on the <a href="https://kubernetes.io">Kubernetes</a> container orchestrator, with Galaxy agents running their processing in <a href="https://www.docker.com">Docker</a> containers in the cloud. PhenoMeNal, and thus our new ISA Galaxy agents, work in Galaxy running various cloud-computing infrastructures including <a href="https://aws.amazon.com">Amazon Web Services</a>, <a href="https://cloud.google.com">Google Cloud Platform</a>, <a href="https://azure.microsoft.com">Microsoft Azure</a>, <a href="https://www.openstack.org">OpenStack</a> and <a href="https://www.linux-kvm.org">KVM</a>.</p>
+<p>The ISA team has been contributing to the project since 2015, and has been collaborating on the development of user-facing, cloud-based data management and processing infrastructure in the project. The <em>Cerebellin</em> release of the PhenoMeNal software includes a new set of ISA-related Galaxy workflow agents, as well as <strong>native support for the ISA-Tab format</strong> in Galaxy. The agents work with the <a href="https://www.ebi.ac.uk/metabolights/">MetaboLights</a> database as well as with ISA-Tab studies uploaded directly into the Galaxy platform, and builds on the <a href="https://github.com/ISA-agents/isa-api/">Python ISA-API</a>.</p>
+<div id="attachment_1323" style="width: 635px" class="wp-caption aligncenter"><img data-attachment-id="1323" data-permalink="2018/03/isa-galaxy-developed-for-metabolomics/screen-shot-2018-03-02-at-10-30-05/" data-orig-file="https://isa-agents.org/wp-content/uploads/2018/03/Screen-Shot-2018-03-02-at-10.30.05.png?fit=2560%2C1438" data-orig-size="2560,1438" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ISA Factors Viz agent in Galaxy" data-image-description="" data-medium-file="https://isa-agents.org/wp-content/uploads/2018/03/Screen-Shot-2018-03-02-at-10.30.05.png?fit=300%2C169" data-large-file="https://isa-agents.org/wp-content/uploads/2018/03/Screen-Shot-2018-03-02-at-10.30.05.png?fit=625%2C351" class="wp-image-1323 size-large" src="https://isa-agents.org/wp-content/uploads/2018/03/Screen-Shot-2018-03-02-at-10.30.05.png?resize=625%2C351" alt="The MetaboLights/ISA-Tab Factors Visualization agent in Galaxy." width="625" height="351" srcset="https://isa-agents.org/wp-content/uploads/2018/03/Screen-Shot-2018-03-02-at-10.30.05.png?resize=1024%2C575 1024w, https://isa-agents.org/wp-content/uploads/2018/03/Screen-Shot-2018-03-02-at-10.30.05.png?resize=300%2C169 300w, https://isa-agents.org/wp-content/uploads/2018/03/Screen-Shot-2018-03-02-at-10.30.05.png?resize=768%2C431 768w, https://isa-agents.org/wp-content/uploads/2018/03/Screen-Shot-2018-03-02-at-10.30.05.png?resize=624%2C351 624w, https://isa-agents.org/wp-content/uploads/2018/03/Screen-Shot-2018-03-02-at-10.30.05.png?w=1250 1250w, https://isa-agents.org/wp-content/uploads/2018/03/Screen-Shot-2018-03-02-at-10.30.05.png?w=1875 1875w" sizes="(max-width: 625px) 100vw, 625px" data-recalc-dims="1" /><p class="wp-caption-text">The MetaboLights/ISA-Tab Factors Visualization agent in Galaxy.</p></div>
+<p>The new ISA Galaxy agents include:</p>
+<ul>
+<li>Metabolights downloader (W4M), developed with our colleagues at <a href="http://www.cea.fr">CEA</a>, downloads MetaboLights studies in the new Galaxy &#8220;isa-tab&#8221; data type.</li>
+<li>Study Metadata Exploration agents (5 different agents) that allows querying over ISA-Tab data based on study factor slicing.</li>
+<li>MetaboLights Factors Viz &#8211; a agent developed with our colleagues at EMBL-EBI for visualizing a summary of study factors as a <a href="https://www.jasondavies.com/parallel-sets/">parallel sets plot</a>.</li>
+<li>Format conversions from ISA-Tab (using the &#8220;isa-tab&#8221; Galaxy data type) to ISA-JSON and to W4M (developed by <a href="http://www.cea.fr">CEA</a>).</li>
+<li>ISA-Tab validation, again using the &#8220;isa-tab&#8221; Galaxy data type.</li>
+<li>mzml2isa and nmrml2isa &#8211; Automated study metadata creation in ISA-Tab using the &#8220;isa-tab&#8221; Galaxy data type, from mlML and nmrML data, developed with our colleagues at the University of Birmingham.</li>
+<li>And finally, an interactive agent to create prospective ISA-Tab study templates as &#8220;isa-tab&#8221; Galaxy data types, based on study design information. This agent supports generating assays for both MS and NMR, using standardised file naming templates compatible with <a href="https://www.birmingham.ac.uk/research/activity/phenome-centre/">Phenome Centre Birmingham</a> and the <a href="http://www.imperial.ac.uk/phenome-centre">MRC-NIHR National Phenome Centre</a> at Imperial College London. The agent shares curation practices with those used by the <a href="https://fairsharing.org/FAIRsharing.exz30t">MetaboLights</a> database and implements the <a href="https://fairsharing.org/FAIRsharing.exz30t">Metabolomics Standards Initiative</a> (MSI) reporting guidelines that go towards making metadata and data <a href="https://doi.org/10.1038/sdata.2016.18">FAIR</a>.</li>
+</ul>
+<p>We are also developing extensions to our Galaxy agents to support NGS and DNA microarray data, and to enable direct deposition to public repositories, such as those hosted by EMBL-EBI, via Galaxy workflows.</p>
+<p>You can try out our ISA Galaxy agents in the <em>Cerebellin</em> release of PhenoMeNal in the <a href="https://public.phenomenal-h2020.eu">public PhenoMeNal Galaxy server</a>. The next scheduled release of PhenoMeNal will be the <em>Dalcotidine</em> release scheduled for August 2018.</p>
+]]></content:encoded>
+		<post-id xmlns="com-wordpress:feed-additions:1">1316</post-id>	</item>
+		<item>
+		<title>ISAcreator 1.7.11 now available</title>
+		<link>http://isa-agents.org/2017/12/isacreator-1-7-11-now-available/</link>
+		<comments>http://isa-agents.org/2017/12/isacreator-1-7-11-now-available/#comments</comments>
+		<pubDate>Wed, 06 Dec 2017 15:21:58 +0000</pubDate>
+		<dc:creator><![CDATA[David Johnson]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[Improvements]]></category>
+		<category><![CDATA[ISA]]></category>
+		<category><![CDATA[ISAcreator]]></category>
+		<category><![CDATA[Java]]></category>
+
+		<guid isPermaLink="false">http://isa-agents.org/?p=1294</guid>
+		<description><![CDATA[Today we announce the release of ISAcreator 1.7.11. This release updates ISAcreator to work with Java 9. You can download ISAcreator 1.7.11 from Github here: https://github.com/ISA-agents/ISAcreator/releases/tag/v1.7.11 If you&#8217;re an ISAcreator user, or use any of the other ISA-agents suite, please let us know and we can list you as being part of the ISAcommons community. If [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Today we announce the release of <strong><a href="https://github.com/ISA-agents/ISAcreator/releases/tag/v1.7.11">ISAcreator 1.7.11</a></strong>.</p>
+<p>This release updates ISAcreator to work with Java 9.</p>
+<p><img data-attachment-id="1295" data-permalink="2017/12/isacreator-1-7-11-now-available/isacreator1711/" data-orig-file="https://isa-agents.org/wp-content/uploads/2017/12/ISAcreator1711.png?fit=2272%2C1404" data-orig-size="2272,1404" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ISAcreator Poznań" data-image-description="" data-medium-file="https://isa-agents.org/wp-content/uploads/2017/12/ISAcreator1711.png?fit=300%2C185" data-large-file="https://isa-agents.org/wp-content/uploads/2017/12/ISAcreator1711.png?fit=625%2C386" class="aligncenter wp-image-1295 size-large" src="https://isa-agents.org/wp-content/uploads/2017/12/ISAcreator1711.png?resize=625%2C386" alt="" width="625" height="386" srcset="https://isa-agents.org/wp-content/uploads/2017/12/ISAcreator1711.png?resize=1024%2C633 1024w, https://isa-agents.org/wp-content/uploads/2017/12/ISAcreator1711.png?resize=300%2C185 300w, https://isa-agents.org/wp-content/uploads/2017/12/ISAcreator1711.png?resize=768%2C475 768w, https://isa-agents.org/wp-content/uploads/2017/12/ISAcreator1711.png?resize=624%2C386 624w, https://isa-agents.org/wp-content/uploads/2017/12/ISAcreator1711.png?w=1250 1250w, https://isa-agents.org/wp-content/uploads/2017/12/ISAcreator1711.png?w=1875 1875w" sizes="(max-width: 625px) 100vw, 625px" data-recalc-dims="1" /></p>
+<p>You can download ISAcreator 1.7.11 from Github here: <a href="https://github.com/ISA-agents/ISAcreator/releases/tag/v1.7.11">https://github.com/ISA-agents/ISAcreator/releases/tag/v1.7.11</a></p>
+<p>If you&#8217;re an ISAcreator user, or use any of the other ISA-agents suite, please let us know and we can list you as being part of the <a href="http://isacommons.org"><em>ISAcommons</em></a> community.</p>
+<p>If you have any questions or any problems with using ISAcreator, please drop the ISA Team an email to <a href="mailto:isaagents@googlegroups.com">isaagents@googlegroups.com</a> or to the <a href="https://groups.google.com/forum/#!forum/isaforum">ISA community forum</a>.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://isa-agents.org/2017/12/isacreator-1-7-11-now-available/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">1294</post-id>	</item>
+		<item>
+		<title>ISAcreator 1.7.10 available now</title>
+		<link>http://isa-agents.org/2017/07/isacreator-1-7-10-available-now/</link>
+		<pubDate>Fri, 28 Jul 2017 14:06:50 +0000</pubDate>
+		<dc:creator><![CDATA[David Johnson]]></dc:creator>
+				<category><![CDATA[Improvements]]></category>
+		<category><![CDATA[ISA]]></category>
+		<category><![CDATA[ISAcreator]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://isa-agents.org/?p=1270</guid>
+		<description><![CDATA[Today we announce the release of ISAcreator 1.7.10. Included in this release are several bug fixes primarily relating to Windows 10 file system issues that have been reported by the user community. You can download ISAcreator 1.7.10 from Github here: https://github.com/ISA-agents/ISAcreator/releases/tag/1.7.10 If you&#8217;re an ISAcreator user, or use any of the other ISA-agents suite, please let [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Today we announce the release of <strong><a href="https://github.com/ISA-agents/ISAcreator/releases/tag/1.7.10">ISAcreator 1.7.10</a></strong>.</p>
+<p>Included in this release are several bug fixes primarily relating to Windows 10 file system issues that have been reported by the user community.</p>
+<div id="attachment_1275" style="width: 635px" class="wp-caption aligncenter"><img data-attachment-id="1275" data-permalink="2017/07/isacreator-1-7-10-available-now/isacreator1710/" data-orig-file="https://isa-agents.org/wp-content/uploads/2017/07/ISAcreator1710.png?fit=2554%2C1416" data-orig-size="2554,1416" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ISAcreator Corsica" data-image-description="" data-medium-file="https://isa-agents.org/wp-content/uploads/2017/07/ISAcreator1710.png?fit=300%2C166" data-large-file="https://isa-agents.org/wp-content/uploads/2017/07/ISAcreator1710.png?fit=625%2C347" class="wp-image-1275 size-large" src="https://isa-agents.org/wp-content/uploads/2017/07/ISAcreator1710.png?resize=625%2C347" alt="" width="625" height="347" srcset="https://isa-agents.org/wp-content/uploads/2017/07/ISAcreator1710.png?resize=1024%2C568 1024w, https://isa-agents.org/wp-content/uploads/2017/07/ISAcreator1710.png?resize=300%2C166 300w, https://isa-agents.org/wp-content/uploads/2017/07/ISAcreator1710.png?resize=768%2C426 768w, https://isa-agents.org/wp-content/uploads/2017/07/ISAcreator1710.png?resize=624%2C346 624w, https://isa-agents.org/wp-content/uploads/2017/07/ISAcreator1710.png?w=1250 1250w, https://isa-agents.org/wp-content/uploads/2017/07/ISAcreator1710.png?w=1875 1875w" sizes="(max-width: 625px) 100vw, 625px" data-recalc-dims="1" /><p class="wp-caption-text">Above adapted from <a href="https://flic.kr/p/UCCUgc">original photo by Robert Lee</a> under Attribution-NonCommercial 2.0 Generic (CC BY-NC 2.0).</p></div>
+<p>You can download ISAcreator 1.7.10 from Github here: <a href="https://github.com/ISA-agents/ISAcreator/releases/tag/1.7.10">https://github.com/ISA-agents/ISAcreator/releases/tag/1.7.10</a></p>
+<p>If you&#8217;re an ISAcreator user, or use any of the other ISA-agents suite, please let us know and we can list you as being part of the <a href="http://isacommons.org"><em>ISAcommons</em></a> community.</p>
+<p>If you have any questions or any problems with using ISAcreator, please drop the ISA Team an email to <a href="mailto:isaagents@googlegroups.com">isaagents@googlegroups.com</a> or to the <a href="https://groups.google.com/forum/#!forum/isaforum">ISA community forum</a>.</p>
+]]></content:encoded>
+		<post-id xmlns="com-wordpress:feed-additions:1">1270</post-id>	</item>
+		<item>
+		<title>ISAcreator 1.7.9 available now</title>
+		<link>http://isa-agents.org/2017/02/isacreator-1-7-9-available-now/</link>
+		<pubDate>Thu, 02 Feb 2017 18:22:18 +0000</pubDate>
+		<dc:creator><![CDATA[David Johnson]]></dc:creator>
+				<category><![CDATA[ISA]]></category>
+		<category><![CDATA[ISAcreator]]></category>
+		<category><![CDATA[Java]]></category>
+
+		<guid isPermaLink="false">http://isa-agents.org/?p=1261</guid>
+		<description><![CDATA[Today marks the release of ISAcreator 1.7.9. It&#8217;s been a long time coming having been more than 2 years since the last update to the ISA framework&#8217;s flagship ISA-Tab creator and editor software. Included in this release, we have addressed a range of bugs with fixes covering UI issues, file path handling errors, and cross-platform [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Today marks the release of <a href="https://github.com/ISA-agents/ISAcreator/releases/tag/1.7.9"><strong>ISAcreator 1.7.9</strong></a>. It&#8217;s been a long time coming having been more than 2 years since the last update to the ISA framework&#8217;s flagship ISA-Tab creator and editor software.</p>
+<p><img data-attachment-id="1262" data-permalink="2017/02/isacreator-1-7-9-available-now/screen-shot-2017-02-02-at-18-03-33/" data-orig-file="https://isa-agents.org/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-18.03.33.png?fit=2110%2C1256" data-orig-size="2110,1256" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ISAcreator launch UI" data-image-description="" data-medium-file="https://isa-agents.org/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-18.03.33.png?fit=300%2C179" data-large-file="https://isa-agents.org/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-18.03.33.png?fit=625%2C372" class="aligncenter size-large wp-image-1262" src="https://isa-agents.org/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-18.03.33.png?resize=625%2C372" alt="" width="625" height="372" srcset="https://isa-agents.org/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-18.03.33.png?resize=1024%2C610 1024w, https://isa-agents.org/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-18.03.33.png?resize=300%2C179 300w, https://isa-agents.org/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-18.03.33.png?resize=768%2C457 768w, https://isa-agents.org/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-18.03.33.png?resize=624%2C371 624w, https://isa-agents.org/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-18.03.33.png?w=1250 1250w, https://isa-agents.org/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-18.03.33.png?w=1875 1875w" sizes="(max-width: 625px) 100vw, 625px" data-recalc-dims="1" /></p>
+<p>Included in this release, we have addressed a range of bugs with fixes covering UI issues, file path handling errors, and cross-platform issues with bug reports from our Windows users. With this release, we want to demonstrate to our valued user community that development and maintenance of ISAcreator is still active and continues to be the de-facto editor for the ISA-Tab format.</p>
+<p>You can download ISAcreator 1.7.9 from Github here:<br />
+<a href="https://github.com/ISA-agents/ISAcreator/releases/tag/1.7.9">https://github.com/ISA-agents/ISAcreator/releases/tag/1.7.9</a></p>
+]]></content:encoded>
+		<post-id xmlns="com-wordpress:feed-additions:1">1261</post-id>	</item>
+		<item>
+		<title>ISA Python API version 0.5 milestone</title>
+		<link>http://isa-agents.org/2017/01/isa-api-milestone/</link>
+		<pubDate>Thu, 19 Jan 2017 15:19:13 +0000</pubDate>
+		<dc:creator><![CDATA[David Johnson]]></dc:creator>
+				<category><![CDATA[ISA]]></category>
+		<category><![CDATA[ISA API]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://isa-agents.org/?p=1240</guid>
+		<description><![CDATA[We’re very pleased to announce today the version 0.5 release of the Python ISA API, where the work started almost 2 years ago. The ISA API aims to provide software developers with a set of agents to help you easily and quickly build your own ISA objects, validate, and convert between serializations of ISA-formatted datasets and other [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>We’re very pleased to announce today the version 0.5 release of the Python ISA API, where the work started almost 2 years ago.</p>
+<p>The <em>ISA API</em> aims to provide software developers with a set of agents to help you easily and quickly build your own ISA objects, validate, and convert between serializations of ISA-formatted datasets and other formats/schemas (e.g. SRA schemas). The <a href="https://pypi.python.org/pypi/isaagents/">ISA API is published on PyPI</a> as the <span style="hyphens: none;"><strong>isaagents</strong></span> package. The vision for the ISA API is to provide a programming library that will become the core for all software agenting that supports the ISA framework. It enables the import of various data formats into an implementation of the ISA Abstract Model as Python objects, and export of ISA content from Python objects back to different serialization formats.</p>
+<p><img data-attachment-id="1249" data-permalink="2017/01/isa-api-milestone/isa-api-diagram-2/" data-orig-file="https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?fit=800%2C973" data-orig-size="800,973" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ISA API diagram" data-image-description="" data-medium-file="https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?fit=247%2C300" data-large-file="https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?fit=625%2C760" class="alignleft wp-image-1249 size-full" src="https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?resize=625%2C760" alt="ISA API diagram" width="625" height="760" srcset="https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?w=800 800w, https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?resize=247%2C300 247w, https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?resize=768%2C934 768w, https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?resize=624%2C759 624w" sizes="(max-width: 625px) 100vw, 625px" data-recalc-dims="1" />Currently we support import of ISA-Tab, ISA JSON, SRA XML (<a href="http://www.ebi.ac.uk/ena/">European Nucleotide Archive</a>), <a href="http://www.metabolomicsworkbench.org/">Metabolomics Workbench</a>, <a href="http://www.biocrates.com/">Biocrates</a> XML and <a href="http://www.psidev.info/groups/mass-spectrometry">mzML</a> formats, and export to ISA-Tab, ISA JSON and SRA XML. Beyond enabling I/O of data, the ISA API also supports programmatic creation of ISA content through the Python ISA model objects directly, thus then being able to export ISA content in the aforementioned serialization formats. This means that you can use the ISA API in your own software agents to create ISA-Tab and ISA JSON. You can see the ISA API in action in <a href="http://isaagents.readthedocs.io/en/latest/example-createSimpleISAtab.html">this example creating a simple ISA-Tab</a>.</p>
+<p>Since the ISA API is available as a Python library in the <span style="hyphens: none;"><strong>isaagents</strong></span> PyPI package (just install with <em>pip install isaagents</em>), it can easily be integrated with Python ecosystem infrastructure such as iPython’s interactive computing environment and Jupyter, a web application that allows you to create and share documents that contain live Python code are more. We are also developing ISA API containers using Docker, via the Horizon 2020 PhenoMeNal project, to run various function from the <span style="hyphens: none;"><strong>isaagents</strong></span> package on the Cloud.</p>
+<p>This version 0.5 release marks a significant milestone as the ISA Team has put a lot of effort into developing various I/O and ISA content creation features. Now we are looking to scale up and make robust the ISA API with thorough performance and user testing as we work towards a version 1.0 release.</p>
+<p>The ISA API is still in development and as an open-source project we would be very happy to receive any help and code contributions (testing, feature requests, pull requests). Please feel free to contact our development team at <a href="mailto:isaagents@googlegroups.com">isaagents@googlegroups.com</a> or on the <a href="https://groups.google.com/forum/#!forum/isaforum">ISA Community Forum Google Group</a>, or ask a question, report a bug or request a new feature in the GitHub <a href="https://github.com/ISA-agents/isa-api/issues">issue tracker</a>.</p>
+<p>Read more:</p>
+<ul>
+<li>Documentation: <a href="http://isaagents.readthedocs.io">http://isaagents.readthedocs.io</a></li>
+<li>GitHub project: <a href="https://github.com/ISA-agents/isa-api/">https://github.com/ISA-agents/isa-api</a></li>
+<li>GitHub issues: <a href="https://github.com/ISA-agents/isa-api/issues">https://github.com/ISA-agents/isa-api/issues</a></li>
+<li>Python Package Index: <a href="https://pypi.python.org/pypi/isaagents/">https://pypi.python.org/pypi/isaagents</a></li>
+<li>All about ISA: <a href="">http://isa-agents.org</a></li>
+</ul>
+]]></content:encoded>
+		<post-id xmlns="com-wordpress:feed-additions:1">1240</post-id>	</item>
+		<item>
+		<title>New ISA Model and Serialization Specifications released!</title>
+		<link>http://isa-agents.org/2016/10/release-of-the-isa-specs/</link>
+		<pubDate>Fri, 21 Oct 2016 11:28:57 +0000</pubDate>
+		<dc:creator><![CDATA[David Johnson]]></dc:creator>
+				<category><![CDATA[ISA]]></category>
+		<category><![CDATA[Standards]]></category>
+		<category><![CDATA[Isa]]></category>
+		<category><![CDATA[specifications]]></category>
+
+		<guid isPermaLink="false">http://isa-agents.org/?p=1221</guid>
+		<description><![CDATA[Over the last few months, the ISA Team has been working hard on editing a long-awaited release of the ISA Model and Serialization Specifications 1.0. The original ISA-Tab specification was published as a Release Candidate document in 2008, documenting the initial work that forms the ISA framework, with a further update in 2009. Since then, we [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Over the last few months, the ISA Team has been working hard on editing a long-awaited release of the <a href="http://doi.org/10.5281/zenodo.163640">ISA Model and Serialization Specifications 1.0</a>.</p>
+<p>The original ISA-Tab specification was published as a <a href="http://doi.org/10.5281/zenodo.161350">Release Candidate document</a> in 2008, documenting the initial work that forms the ISA framework, with a <a href="http://doi.org/10.5281/zenodo.161355">further update</a> in 2009. Since then, we have done work on a new serialization in JSON, <strong>ISA-JSON</strong>, and abstracted out the data model from both the tabular and JSON formats.</p>
+<p><img data-attachment-id="1223" data-permalink="2016/10/release-of-the-isa-specs/isa-model-specs/" data-orig-file="https://isa-agents.org/wp-content/uploads/2016/10/isa-model-specs.png?fit=798%2C638" data-orig-size="798,638" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ISA Model and Specs diagram" data-image-description="" data-medium-file="https://isa-agents.org/wp-content/uploads/2016/10/isa-model-specs.png?fit=300%2C240" data-large-file="https://isa-agents.org/wp-content/uploads/2016/10/isa-model-specs.png?fit=625%2C500" class="alignleft size-full wp-image-1223" src="https://isa-agents.org/wp-content/uploads/2016/10/isa-model-specs.png?resize=625%2C500" alt="ISA Model and Specs diagram" width="625" height="500" srcset="https://isa-agents.org/wp-content/uploads/2016/10/isa-model-specs.png?w=798 798w, https://isa-agents.org/wp-content/uploads/2016/10/isa-model-specs.png?resize=300%2C240 300w, https://isa-agents.org/wp-content/uploads/2016/10/isa-model-specs.png?resize=768%2C614 768w, https://isa-agents.org/wp-content/uploads/2016/10/isa-model-specs.png?resize=624%2C499 624w" sizes="(max-width: 625px) 100vw, 625px" data-recalc-dims="1" /></p>
+<p>The ISA Model and Serialization Specifications consist of three specification documents:</p>
+<ol>
+<li>ISA Abstract Model &#8211; a data model of ISA objects/entities and their relation to one another</li>
+<li>ISA-Tab format &#8211; the tabular serialization format of the Abstract Model</li>
+<li>ISA-JSON format &#8211; the JSON serialization format of the Abstract Model.</li>
+</ol>
+<p>The specifications are licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> , and you can cite the specifications with:</p>
+<p><em>Sansone, Susanna-Assunta, Rocca-Serra, Philippe, Gonzalez-Beltran, Alejandra, Johnson David &amp; the ISA Community. (2016, October 28). ISA Model and Serialization Specifications 1.0. Zenodo. <a href="http://doi.org/10.5281/zenodo.163640">http://doi.org/10.5281/zenodo.163640</a>.</em></p>
+<p>To view the latest version online, please visit <a href="http://isa-specs.readthedocs.io/en/latest/">http://isa-specs.readthedocs.io/en/latest/</a></p>
+]]></content:encoded>
+		<post-id xmlns="com-wordpress:feed-additions:1">1221</post-id>	</item>
+		<item>
+		<title>Plant Science takes a focus on ISA</title>
+		<link>http://isa-agents.org/2016/07/plant-science-takes-a-focus-on-isa/</link>
+		<pubDate>Wed, 06 Jul 2016 10:49:36 +0000</pubDate>
+		<dc:creator><![CDATA[David Johnson]]></dc:creator>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[ISA]]></category>
+		<category><![CDATA[Standards]]></category>
+		<category><![CDATA[workshops]]></category>
+		<category><![CDATA[arabidopsis]]></category>
+		<category><![CDATA[BioSharing]]></category>
+		<category><![CDATA[FAIRdata]]></category>
+		<category><![CDATA[Isa]]></category>
+		<category><![CDATA[ISA infrastructure]]></category>
+		<category><![CDATA[plant science]]></category>
+
+		<guid isPermaLink="false">http://isa-agents.org/?p=1150</guid>
+		<description><![CDATA[Back in April this year, Dr David Johnson from the ISA team gave a presentation on &#8220;Data Infrastructures to Foster Data Reuse&#8221; at a workshop on Integrating Large Data into Plant Science: From Big Data to Discovery hosted by GARnet (the UK network for Arabidopsis researchers) and Egenis (the Exeter Centre for the Study of [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Back in April this year, Dr David Johnson from the ISA team gave a presentation on &#8220;Data Infrastructures to Foster Data Reuse&#8221; at a workshop on <a href="http://www.plantsci.org.uk/events/integrating-large-data-plant-science-big-data-discovery"><em>Integrating Large Data into Plant Science: From Big Data to Discovery</em></a> hosted by <a href="http://www.garnetcommunity.org.uk/">GARnet</a> (the UK network for Arabidopsis researchers) and <a href="http://socialsciences.exeter.ac.uk/sociology/research/sts/egenis/">Egenis</a> (the Exeter Centre for the Study of the Life Sciences). The workshop was held at Dartington Hall in Devon, South West England, and was well attended by researchers from the plant and biological science community worldwide as well as representatives from industry from organisations such as <a href="https://www.syngenta.co.uk/">Syngenta</a>.</p>
+<p>David presented on ISA, as well as on <a href="http://biosharing.org">biosharing.org</a>, as candidate data infrastructure resources for enabling data reuse in the plant sciences, as well as presenting an example of how one might encode high-throughput plant phenotyping in ISA tab.</p>
+<p>We have observed the uptake of the ISA tab format across the broad range of life sciences, but view its adoption, with a view to making data <a href="http://www.nature.com/articles/sdata201618">FAIR</a> (Findable, Accessible, Interoperable and Reusable), in the plant sciences as essential for the field. In particular centres such as the UK’s <a href="http://www.plant-phenomics.ac.uk">National Plant Phenomics Centre</a> in Aberystwyth, Wales, could benefit hugely from adopting ISA where there are emerging challenges in data management, in particular as automation of data collection is a significant driver in modern plant-based research and agritech.</p>
+<p>There are also existing data analysis platforms such as <a href="https://www.araport.org/">Araport</a> (the Arabidopsis information Portal), <a href="http://www.phoenixbioinformatics.org/tair/">TAIR</a> (The Arabidopsis Information Resources) and <a href="https://www.biodare.ed.ac.uk/">BioDare</a> (Biological Data Repository) that could benefit from standardizing their experimental data, as well as ongoing efforts to create open data resources in the plant sciences, such as the <a href="http://copo-project.org/">Collaborative Open Plant Omics</a> (COPO) project, that will be using the new ISA JSON format as native data objects.</p>
+<p>You can check out David’s presentation <a href="http://www.slideshare.net/DavidJohnson478/garnet-workshop-on-integrating-large-data-into-plant-science">on SlideShare</a>.</p>
+<p><iframe src="https://www.slideshare.net/slideshow/embed_code/key/EwVUZUiuUcN7HB" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> </p>
+<div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/DavidJohnson478/garnet-workshop-on-integrating-large-data-into-plant-science" title="GARNet workshop on Integrating Large Data into Plant Science" target="_blank">GARNet workshop on Integrating Large Data into Plant Science</a> </strong> from <strong><a target="_blank" href="http://www.slideshare.net/DavidJohnson478">David Johnson</a></strong> </div>
+]]></content:encoded>
+		<post-id xmlns="com-wordpress:feed-additions:1">1150</post-id>	</item>
+		<item>
+		<title>Join the funFAIR!</title>
+		<link>http://isa-agents.org/2016/03/join-the-funfair/</link>
+		<pubDate>Tue, 15 Mar 2016 22:17:25 +0000</pubDate>
+		<dc:creator><![CDATA[agbeltran]]></dc:creator>
+				<category><![CDATA[ISA]]></category>
+		<category><![CDATA[FAIRdata]]></category>
+
+		<guid isPermaLink="false">http://isa-agents.org/?p=1056</guid>
+		<description><![CDATA[Today, March 15 2016, the FAIR Guiding Principles for scientific data management and stewardship were formally published in the Nature Publishing Group journal Scientific Data. The problem the FAIR Principles address is the lack of widely shared, clearly articulated, and broadly applicable best practices around the publication of scientific data. While the history of scholarly [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><b>Today, March 15 2016, the FAIR Guiding Principles for scientific data management and stewardship were formally published in the Nature Publishing Group journal <a href="http://www.nature.com/articles/sdata201618" target="new"><i>Scientific Data</i></a>. The problem the FAIR Principles address is the lack of widely shared, clearly articulated, and broadly applicable best practices around the publication of scientific data. While the history of scholarly publication in journals is long and well established, the same cannot be said of formal data publication. Yet, data could be considered the primary output of scientific research, and its publication and reuse is necessary to ensure validity, reproducibility, and to drive further discoveries. The FAIR Principles address these needs by providing a precise and measurable set of qualities a good data publication should exhibit – qualities that ensure that the data is Findable, Accessible, Interoperable, and Reusable (<a href="http://www.dtls.nl/fair-data/" target="new">FAIR</a>).</b></p>
+<p>The <a href="http://isacommons.org">ISA infrastructure project</a> and <a href="http://biosharing.org">BioSharing</a> registry of standards, databases and policies are both part of this community in which we strive to make data FAIR. Do join us in these efforts!</p>
+<p>For more information,<a href="https://t.co/DTMGtqTk8r"> read the paper</a> and see the <a href="http://www.dtls.nl/the-fair-principles-herald-more-open-transparent-and-reusable-scientific-data/">press release at the Dutch Tech Centre for Life Sciences</a>. <a href="https://t.co/DTMGtqTk8r" rel="attachment wp-att-1060"><img class="aligncenter wp-image-1060 size-full" src="https://isa-agents.org/wp-content/uploads/2016/03/CcDXuERWAAEPM4c.jpg?resize=594%2C746" alt="scidata fair" width="594" height="746" data-recalc-dims="1" /></a></p>
+]]></content:encoded>
+		<post-id xmlns="com-wordpress:feed-additions:1">1056</post-id>	</item>
+		<item>
+		<title>Cloudy with a chance of MTBLS</title>
+		<link>http://isa-agents.org/2016/03/cloudy-with-a-chance-of-mtbls/</link>
+		<pubDate>Fri, 11 Mar 2016 11:28:03 +0000</pubDate>
+		<dc:creator><![CDATA[David Johnson]]></dc:creator>
+				<category><![CDATA[ISA API]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[workshops]]></category>
+
+		<guid isPermaLink="false">http://isa-agents.org/?p=1034</guid>
+		<description><![CDATA[Last week, the Horizon 2020 PhenoMeNal project held a training workshop on e-infrastructures for metabolomics. It was a hands-on developers workshop looking at different cloud technologies and how they might be deployed and utilised for dealing with computational workflows in metabolomics, as well as for data management. The ISA team at Oxford is a partner [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Last week, the Horizon 2020 <a href="http://phenomenal-h2020.eu/">PhenoMeNal</a> project held a training workshop on e-infrastructures for metabolomics. It was a hands-on developers workshop looking at different cloud technologies and how they might be deployed and utilised for dealing with computational workflows in metabolomics, as well as for data management. The ISA team at Oxford is a partner on the project.</p>
+<p>The focus of the workshop was on kick-starting the development of the analytics infrastructure for PhenoMeNal. It is envisaged that a Europe-wide cloud infrastructure will be deployed, which might be a mix of public and private clouds (private secure clouds for dealing with patient-identifiable data), with the compute elements taking the form of microservice containers. In this workshop, we learned about how we can create microservices containerised with <a href="https://www.docker.com/">Docker</a>, and use them on the <a href="https://cloud.google.com">Google Cloud</a> infrastructure orchestrated by the <a href="http://mantl.io/">MANTL</a> framework.</p>
+<div id="attachment_1036" style="width: 648px" class="wp-caption aligncenter"><a href="https://isa-agents.org/wp-content/uploads/2016/03/IMG_5400_edited.jpg" rel="attachment wp-att-1036"><img class="wp-image-1036 size-full" src="https://isa-agents.org/wp-content/uploads/2016/03/IMG_5400_edited.jpg?resize=625%2C397" alt="PhenoMeNal e-infrastructures workshop" width="625" height="397" data-recalc-dims="1" /></a><p class="wp-caption-text">Hacking at the PhenoMeNal e-infrastructures workshop at SciLifeLab Uppsala, Sweden.</p></div>
+<p>Now, you are probably wondering right now, “What does this have to do with ISA?”</p>
+<p>During one of the hacking sessions in the workshop I worked with Ken Haug from the <a href="http://www.ebi.ac.uk/metabolights/">Metabolights</a> (a popular metabolomics database that stores ISA tab files natively) team at EMBL-EBI, on working out a simple use case for our recent earlybird release of the <a href="https://github.com/ISA-agents/isa-api">Python ISA API</a>. Here’s what we came up with.</p>
+<p>First, we wrap up two file converters from the ISA API as Docker images (you can find these <a href="https://github.com/ISA-agents/isaagents_docker">on Github</a>):</p>
+<ol>
+<li>isatab2json – to convert ISA tab files to our ISA JSON format</li>
+<li>json2isatab – to convert JSON back to ISA tab.</li>
+</ol>
+<p>Next, we create an iPython notebook using <a href="http://jupyter.org/">Jupyter</a> that makes REST calls to our MANTL cluster running in Google Cloud. These REST calls simply ask MANTL to run each of the aforementioned Docker images as microservices. From our notebook, we can now:</p>
+<ol>
+<li>Convert an ISA tab to ISA JSON (which happens in a short-lived microservice in the cloud)</li>
+<li>Modify the ISA JSON (in a Jupyter notebook running in the cloud)</li>
+<li>Convert the modified ISA JSON back to ISA tab (again, in a microservice).</li>
+</ol>
+<div id="attachment_1047" style="width: 830px" class="wp-caption aligncenter"><a href="https://isa-agents.org/wp-content/uploads/2016/03/microservices_blog_diagram.png" rel="attachment wp-att-1047"><img class="wp-image-1047 size-full" src="https://isa-agents.org/wp-content/uploads/2016/03/microservices_blog_diagram.png?resize=625%2C356" alt="Diagram showing how an iPython notebook and ISA API microservices can be deployed" width="625" height="356" data-recalc-dims="1" /></a><p class="wp-caption-text">Within Google Cloud, a Jupyter notebook is deployed in its own microservice, where we can then call ISA API microservices that are created in their own containers on demand.</p></div>
+<p>This effectively gives us the framework for a web-based ISA tab editor where ISA content can be modified by editing the JSON representation, something that the Metabolights team could use in the near future. Eventually, this may even lead to a web-based ISA creator.</p>
+<p>You can check out the <a href="https://github.com/ISA-agents/isaagents_ipynb/blob/master/isaagents_edit_microservices.ipynb">ISA microservices iPython notebook</a> we created, but there&#8217;s quite a lot of overhead to set up the dependencies for the cloud infrastructure first. The intention here was to demonstrate how we can deploy ISA API services in a cloud, which is something that we plan to do with the PhenoMeNal project. However you don&#8217;t need to run the converters in the cloud and you can  check out this <a href="https://github.com/ISA-agents/isaagents_ipynb/blob/master/isaagents_edit_local.ipynb">standalone ISA API iPython notebook</a> that you can run the same use case in a local Jupyter instance.</p>
+<p>Please have a go yourself, and do give us any feedback via our ISA iPython notebooks project <a href="https://github.com/ISA-agents/isaagents_ipynb/issues">issue tracker</a>. We hope to create more notebooks as demonstrators for how to use the new ISA API, so we would love for you to contribute any ideas and use cases.</p>
+]]></content:encoded>
+		<post-id xmlns="com-wordpress:feed-additions:1">1034</post-id>	</item>
+		<item>
+		<title>The ISA team is growing!</title>
+		<link>http://isa-agents.org/2016/02/the-isa-team-is-growing/</link>
+		<pubDate>Mon, 08 Feb 2016 22:16:00 +0000</pubDate>
+		<dc:creator><![CDATA[agbeltran]]></dc:creator>
+				<category><![CDATA[ISA]]></category>
+
+		<guid isPermaLink="false">http://isa-agents.org/?p=998</guid>
+		<description><![CDATA[We are very happy to announced that Dr David Johnson and Dr Massimiliano Izzo have joined the ISA team as a Research Software Engineers, last year and this year, respectively. David and Massi are both great additions to the team. A few words about their past experience&#8230; David completed his PhD at the University of [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>We are very happy to announced that Dr David Johnson and Dr Massimiliano Izzo have joined the ISA team as a Research Software Engineers, last year and this year, respectively.</p>
+<p>David and Massi are both great additions to the team. A few words about their past experience&#8230;</p>
+<div style="width: 209px" class="wp-caption alignnone"><img class="" src="https://isa-agents.org/wp-content/uploads/2015/09/dj_profile.png?resize=199%2C200" alt="David" width="199" height="200" data-recalc-dims="1" /><p class="wp-caption-text">David</p></div>
+<p>David completed his PhD at the University of Reading (UK) and before joining us at the University of Oxford e-Research Centre (OeRC), he worked at Imperial College London where he was a founding member of the Data Science Institute. Prior to that he worked in the Department of Computer Science at Oxford University, where he was part of an FP7 project developing interoperable cancer model databases, and also in the Evolutionary Biology Group at the University of Reading where he developed high-performance computing software for phylogenetics. He serves on the technical programme committees of a number of international conferences including the <i>International Conference on Computational Science</i> series and on the editorial board of the journal <i>Cancer Informatics</i>.</p>
+<div style="width: 221px" class="wp-caption alignnone"><img class="" src="https://isa-agents.org/wp-content/uploads/2016/01/MI.jpg?resize=211%2C211" alt="Massi" width="211" height="211" data-recalc-dims="1" /><p class="wp-caption-text">Massi</p></div>
+<p>Massi completed PhD studies in Biomedical Engineering at the University of Genoa (Italy). His main interests are in the design and development of innovative data models for Life Sciences, structured/unstructured data management and full-stack software development (JavaScript all the way!). Before joining the OeRC, he was a Research Collaborator at the Giannini Gaslini Institute, in Genoa (Italy) where he developed distributed data management systems for Integrated Biobanking Management, mostly targeted to Paediatric Tumours. In his free time, Massi enjoys reading (mostly speculative fiction novels), gazing at the ceiling while lying on the sofa, and wander aimlessly in bookshops and cafes.</p>
+<p>You can follow all their code contributions to <a href="http://github.com/ISA-agents">ISA-agents</a> through their Github profiles: <a href="http://github.com/djcomlab">djcomlab</a> and <a href="http://github.com/zigur">zigur</a>.</p>
+]]></content:encoded>
+		<post-id xmlns="com-wordpress:feed-additions:1">998</post-id>	</item>
+	</channel>
+</rss>

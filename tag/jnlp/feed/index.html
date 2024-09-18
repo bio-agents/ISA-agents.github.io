@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>JNLP &#8211; ISA agents</title>
+	<atom:link href="tag/jnlp/feed/" rel="self" type="application/rss+xml" />
+	<link>http://isa-agents.org</link>
+	<description>Standardizing metadata for scientific experiments</description>
+	<lastBuildDate>Thu, 19 Apr 2018 15:23:29 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.5</generator>
+<site xmlns="com-wordpress:feed-additions:1">113852667</site>	<item>
+		<title>Creating an ISAcreator WebStart application</title>
+		<link>http://isa-agents.org/2011/01/creating-an-isacreator-webstart-application/</link>
+		<pubDate>Wed, 05 Jan 2011 11:03:15 +0000</pubDate>
+		<dc:creator><![CDATA[isaagents]]></dc:creator>
+				<category><![CDATA[post]]></category>
+		<category><![CDATA[ISAcreator]]></category>
+		<category><![CDATA[JNLP]]></category>
+		<category><![CDATA[web]]></category>
+		<category><![CDATA[webstart]]></category>
+
+		<guid isPermaLink="false">http://isaagents.wordpress.com/2011/01/05/creating-an-isacreator-webstart-application/</guid>
+		<description><![CDATA[One of the advantages of creating a webstart application is that it&#8217;s pretty much point and click. From a browser page, users can gain access to your Java agent relatively quickly. To deploy a JNLP version of ISAcreator within your organisation, you should follow the following steps&#8230; 1. Get the ISAcreator Jar file you wish [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>One of the advantages of creating a webstart application is that it&#8217;s pretty much point and click. From a browser page, users can gain access to your Java agent relatively quickly.</p>
+<p>To deploy a JNLP version of ISAcreator within your organisation, you should follow the following steps&#8230;</p>
+<p>1. Get the ISAcreator Jar file you wish to expose via the web.<br />
+2. You need to digitally sign the Jar file using a jarsigner. there are two steps to this process:<br />
+a. Create your key store with an alias (name) using keyagent<br />
+<i>keyagent -genkey -keystore isaagents-keys -alias ISAcreator</i><br />
+b. Sign the ISAcreator jar file using the key you have just generated<br />
+<i>jarsigner -keystore isaagents-keys ISAcreator-1.3.1.jar ISAcreator</i></p>
+<p>3. Create a JNLP file describing the agent and where the Jar file is located, replacing the baseurl text with the URL of where the ISAcreator.jnlp file etc. are located :</p>
+<ol class="code">
+<li>
+<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;</pre>
+</li>
+<li>
+<pre>&lt;jnlp spec="1.0+" codebase="baseURL" href="ISAcreator.jnlp"&gt;</pre>
+</li>
+<li>
+<pre>	&lt;information&gt;</pre>
+</li>
+<li>
+<pre>		&lt;title&gt;ISAcreator 1.3&lt;/title&gt;</pre>
+</li>
+<li>
+<pre>		&lt;vendor&gt;ISAagents team, University of Oxford, UK&lt;/vendor&gt;</pre>
+</li>
+<li>
+<pre>		&lt;homepage href="http://isaagents.org" /&gt;</pre>
+</li>
+<li>
+<pre>		&lt;description&gt;ISAcreator&lt;/description&gt;</pre>
+</li>
+<li>
+<pre>		&lt;version&gt;1.3&lt;/version&gt;</pre>
+</li>
+<li>
+<pre>		&lt;icon href="baseURL/isacreator_logo.jpg"/&gt;</pre>
+</li>
+<li>
+<pre>		&lt;offline-allowed/&gt;</pre>
+</li>
+<li>
+<pre>	&lt;/information&gt;</pre>
+</li>
+<li>
+<pre>	&lt;security&gt;</pre>
+</li>
+<li>
+<pre>		&lt;all-permissions/&gt;</pre>
+</li>
+<li>
+<pre>	&lt;/security&gt;</pre>
+</li>
+<li>
+<pre>	&lt;resources&gt;</pre>
+</li>
+<li>
+<pre>		&lt;j2se version="1.5+" /&gt;</pre>
+</li>
+<li>
+<pre>		&lt;jar href="baseURL/ISAcreator-1.3.1.jar" /&gt;</pre>
+</li>
+<li>
+<pre>	&lt;/resources&gt;</pre>
+</li>
+<li>
+<pre>&lt;/jnlp&gt;</pre>
+</li>
+<li>
+<pre></pre>
+</li>
+</ol>
+<p>Now deploy the files to your web server of choice and link to the JNLP file to allow users to download ISAcreator to their machine. An example instance is running at: http://www.antarctic-design.co.uk/isacreator/ISAcreator.jnlp</p>
+]]></content:encoded>
+		<post-id xmlns="com-wordpress:feed-additions:1">135</post-id>	</item>
+	</channel>
+</rss>

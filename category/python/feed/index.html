@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python &#8211; ISA agents</title>
+	<atom:link href="category/python/feed/" rel="self" type="application/rss+xml" />
+	<link>http://isa-agents.org</link>
+	<description>Standardizing metadata for scientific experiments</description>
+	<lastBuildDate>Thu, 19 Apr 2018 15:23:29 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.5</generator>
+<site xmlns="com-wordpress:feed-additions:1">113852667</site>	<item>
+		<title>ISA Python API version 0.5 milestone</title>
+		<link>http://isa-agents.org/2017/01/isa-api-milestone/</link>
+		<pubDate>Thu, 19 Jan 2017 15:19:13 +0000</pubDate>
+		<dc:creator><![CDATA[David Johnson]]></dc:creator>
+				<category><![CDATA[ISA]]></category>
+		<category><![CDATA[ISA API]]></category>
+		<category><![CDATA[Python]]></category>
+
+		<guid isPermaLink="false">http://isa-agents.org/?p=1240</guid>
+		<description><![CDATA[We’re very pleased to announce today the version 0.5 release of the Python ISA API, where the work started almost 2 years ago. The ISA API aims to provide software developers with a set of agents to help you easily and quickly build your own ISA objects, validate, and convert between serializations of ISA-formatted datasets and other [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>We’re very pleased to announce today the version 0.5 release of the Python ISA API, where the work started almost 2 years ago.</p>
+<p>The <em>ISA API</em> aims to provide software developers with a set of agents to help you easily and quickly build your own ISA objects, validate, and convert between serializations of ISA-formatted datasets and other formats/schemas (e.g. SRA schemas). The <a href="https://pypi.python.org/pypi/isaagents/">ISA API is published on PyPI</a> as the <span style="hyphens: none;"><strong>isaagents</strong></span> package. The vision for the ISA API is to provide a programming library that will become the core for all software agenting that supports the ISA framework. It enables the import of various data formats into an implementation of the ISA Abstract Model as Python objects, and export of ISA content from Python objects back to different serialization formats.</p>
+<p><img data-attachment-id="1249" data-permalink="2017/01/isa-api-milestone/isa-api-diagram-2/" data-orig-file="https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?fit=800%2C973" data-orig-size="800,973" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ISA API diagram" data-image-description="" data-medium-file="https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?fit=247%2C300" data-large-file="https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?fit=625%2C760" class="alignleft wp-image-1249 size-full" src="https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?resize=625%2C760" alt="ISA API diagram" width="625" height="760" srcset="https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?w=800 800w, https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?resize=247%2C300 247w, https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?resize=768%2C934 768w, https://isa-agents.org/wp-content/uploads/2017/01/isa-api-diagram-1.png?resize=624%2C759 624w" sizes="(max-width: 625px) 100vw, 625px" data-recalc-dims="1" />Currently we support import of ISA-Tab, ISA JSON, SRA XML (<a href="http://www.ebi.ac.uk/ena/">European Nucleotide Archive</a>), <a href="http://www.metabolomicsworkbench.org/">Metabolomics Workbench</a>, <a href="http://www.biocrates.com/">Biocrates</a> XML and <a href="http://www.psidev.info/groups/mass-spectrometry">mzML</a> formats, and export to ISA-Tab, ISA JSON and SRA XML. Beyond enabling I/O of data, the ISA API also supports programmatic creation of ISA content through the Python ISA model objects directly, thus then being able to export ISA content in the aforementioned serialization formats. This means that you can use the ISA API in your own software agents to create ISA-Tab and ISA JSON. You can see the ISA API in action in <a href="http://isaagents.readthedocs.io/en/latest/example-createSimpleISAtab.html">this example creating a simple ISA-Tab</a>.</p>
+<p>Since the ISA API is available as a Python library in the <span style="hyphens: none;"><strong>isaagents</strong></span> PyPI package (just install with <em>pip install isaagents</em>), it can easily be integrated with Python ecosystem infrastructure such as iPython’s interactive computing environment and Jupyter, a web application that allows you to create and share documents that contain live Python code are more. We are also developing ISA API containers using Docker, via the Horizon 2020 PhenoMeNal project, to run various function from the <span style="hyphens: none;"><strong>isaagents</strong></span> package on the Cloud.</p>
+<p>This version 0.5 release marks a significant milestone as the ISA Team has put a lot of effort into developing various I/O and ISA content creation features. Now we are looking to scale up and make robust the ISA API with thorough performance and user testing as we work towards a version 1.0 release.</p>
+<p>The ISA API is still in development and as an open-source project we would be very happy to receive any help and code contributions (testing, feature requests, pull requests). Please feel free to contact our development team at <a href="mailto:isaagents@googlegroups.com">isaagents@googlegroups.com</a> or on the <a href="https://groups.google.com/forum/#!forum/isaforum">ISA Community Forum Google Group</a>, or ask a question, report a bug or request a new feature in the GitHub <a href="https://github.com/ISA-agents/isa-api/issues">issue tracker</a>.</p>
+<p>Read more:</p>
+<ul>
+<li>Documentation: <a href="http://isaagents.readthedocs.io">http://isaagents.readthedocs.io</a></li>
+<li>GitHub project: <a href="https://github.com/ISA-agents/isa-api/">https://github.com/ISA-agents/isa-api</a></li>
+<li>GitHub issues: <a href="https://github.com/ISA-agents/isa-api/issues">https://github.com/ISA-agents/isa-api/issues</a></li>
+<li>Python Package Index: <a href="https://pypi.python.org/pypi/isaagents/">https://pypi.python.org/pypi/isaagents</a></li>
+<li>All about ISA: <a href="">http://isa-agents.org</a></li>
+</ul>
+]]></content:encoded>
+		<post-id xmlns="com-wordpress:feed-additions:1">1240</post-id>	</item>
+		<item>
+		<title>Cloudy with a chance of MTBLS</title>
+		<link>http://isa-agents.org/2016/03/cloudy-with-a-chance-of-mtbls/</link>
+		<pubDate>Fri, 11 Mar 2016 11:28:03 +0000</pubDate>
+		<dc:creator><![CDATA[David Johnson]]></dc:creator>
+				<category><![CDATA[ISA API]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[workshops]]></category>
+
+		<guid isPermaLink="false">http://isa-agents.org/?p=1034</guid>
+		<description><![CDATA[Last week, the Horizon 2020 PhenoMeNal project held a training workshop on e-infrastructures for metabolomics. It was a hands-on developers workshop looking at different cloud technologies and how they might be deployed and utilised for dealing with computational workflows in metabolomics, as well as for data management. The ISA team at Oxford is a partner [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>Last week, the Horizon 2020 <a href="http://phenomenal-h2020.eu/">PhenoMeNal</a> project held a training workshop on e-infrastructures for metabolomics. It was a hands-on developers workshop looking at different cloud technologies and how they might be deployed and utilised for dealing with computational workflows in metabolomics, as well as for data management. The ISA team at Oxford is a partner on the project.</p>
+<p>The focus of the workshop was on kick-starting the development of the analytics infrastructure for PhenoMeNal. It is envisaged that a Europe-wide cloud infrastructure will be deployed, which might be a mix of public and private clouds (private secure clouds for dealing with patient-identifiable data), with the compute elements taking the form of microservice containers. In this workshop, we learned about how we can create microservices containerised with <a href="https://www.docker.com/">Docker</a>, and use them on the <a href="https://cloud.google.com">Google Cloud</a> infrastructure orchestrated by the <a href="http://mantl.io/">MANTL</a> framework.</p>
+<div id="attachment_1036" style="width: 648px" class="wp-caption aligncenter"><a href="https://isa-agents.org/wp-content/uploads/2016/03/IMG_5400_edited.jpg" rel="attachment wp-att-1036"><img class="wp-image-1036 size-full" src="https://isa-agents.org/wp-content/uploads/2016/03/IMG_5400_edited.jpg?resize=625%2C397" alt="PhenoMeNal e-infrastructures workshop" width="625" height="397" data-recalc-dims="1" /></a><p class="wp-caption-text">Hacking at the PhenoMeNal e-infrastructures workshop at SciLifeLab Uppsala, Sweden.</p></div>
+<p>Now, you are probably wondering right now, “What does this have to do with ISA?”</p>
+<p>During one of the hacking sessions in the workshop I worked with Ken Haug from the <a href="http://www.ebi.ac.uk/metabolights/">Metabolights</a> (a popular metabolomics database that stores ISA tab files natively) team at EMBL-EBI, on working out a simple use case for our recent earlybird release of the <a href="https://github.com/ISA-agents/isa-api">Python ISA API</a>. Here’s what we came up with.</p>
+<p>First, we wrap up two file converters from the ISA API as Docker images (you can find these <a href="https://github.com/ISA-agents/isaagents_docker">on Github</a>):</p>
+<ol>
+<li>isatab2json – to convert ISA tab files to our ISA JSON format</li>
+<li>json2isatab – to convert JSON back to ISA tab.</li>
+</ol>
+<p>Next, we create an iPython notebook using <a href="http://jupyter.org/">Jupyter</a> that makes REST calls to our MANTL cluster running in Google Cloud. These REST calls simply ask MANTL to run each of the aforementioned Docker images as microservices. From our notebook, we can now:</p>
+<ol>
+<li>Convert an ISA tab to ISA JSON (which happens in a short-lived microservice in the cloud)</li>
+<li>Modify the ISA JSON (in a Jupyter notebook running in the cloud)</li>
+<li>Convert the modified ISA JSON back to ISA tab (again, in a microservice).</li>
+</ol>
+<div id="attachment_1047" style="width: 830px" class="wp-caption aligncenter"><a href="https://isa-agents.org/wp-content/uploads/2016/03/microservices_blog_diagram.png" rel="attachment wp-att-1047"><img class="wp-image-1047 size-full" src="https://isa-agents.org/wp-content/uploads/2016/03/microservices_blog_diagram.png?resize=625%2C356" alt="Diagram showing how an iPython notebook and ISA API microservices can be deployed" width="625" height="356" data-recalc-dims="1" /></a><p class="wp-caption-text">Within Google Cloud, a Jupyter notebook is deployed in its own microservice, where we can then call ISA API microservices that are created in their own containers on demand.</p></div>
+<p>This effectively gives us the framework for a web-based ISA tab editor where ISA content can be modified by editing the JSON representation, something that the Metabolights team could use in the near future. Eventually, this may even lead to a web-based ISA creator.</p>
+<p>You can check out the <a href="https://github.com/ISA-agents/isaagents_ipynb/blob/master/isaagents_edit_microservices.ipynb">ISA microservices iPython notebook</a> we created, but there&#8217;s quite a lot of overhead to set up the dependencies for the cloud infrastructure first. The intention here was to demonstrate how we can deploy ISA API services in a cloud, which is something that we plan to do with the PhenoMeNal project. However you don&#8217;t need to run the converters in the cloud and you can  check out this <a href="https://github.com/ISA-agents/isaagents_ipynb/blob/master/isaagents_edit_local.ipynb">standalone ISA API iPython notebook</a> that you can run the same use case in a local Jupyter instance.</p>
+<p>Please have a go yourself, and do give us any feedback via our ISA iPython notebooks project <a href="https://github.com/ISA-agents/isaagents_ipynb/issues">issue tracker</a>. We hope to create more notebooks as demonstrators for how to use the new ISA API, so we would love for you to contribute any ideas and use cases.</p>
+]]></content:encoded>
+		<post-id xmlns="com-wordpress:feed-additions:1">1034</post-id>	</item>
+	</channel>
+</rss>

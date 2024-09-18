@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>NCBO Bioportal &#8211; ISA agents</title>
+	<atom:link href="tag/ncbo-bioportal/feed/" rel="self" type="application/rss+xml" />
+	<link>http://isa-agents.org</link>
+	<description>Standardizing metadata for scientific experiments</description>
+	<lastBuildDate>Thu, 19 Apr 2018 15:23:29 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.5</generator>
+<site xmlns="com-wordpress:feed-additions:1">113852667</site>	<item>
+		<title>Introducing OntoMaton  &#8211; Ontology Search &#038; Tagging for Google Spreadsheets</title>
+		<link>http://isa-agents.org/2012/07/introducing-ontomaton-ontology-search-tagging-for-google-spreadsheets/</link>
+		<comments>http://isa-agents.org/2012/07/introducing-ontomaton-ontology-search-tagging-for-google-spreadsheets/#comments</comments>
+		<pubDate>Fri, 13 Jul 2012 17:50:53 +0000</pubDate>
+		<dc:creator><![CDATA[isaagents]]></dc:creator>
+				<category><![CDATA[ISA]]></category>
+		<category><![CDATA[ISAcreator]]></category>
+		<category><![CDATA[Ontologies]]></category>
+		<category><![CDATA[Standards]]></category>
+		<category><![CDATA[Web]]></category>
+		<category><![CDATA[Google docs]]></category>
+		<category><![CDATA[Google Spreadsheets]]></category>
+		<category><![CDATA[ISA-Ta]]></category>
+		<category><![CDATA[ISAagents]]></category>
+		<category><![CDATA[NCBO Bioportal]]></category>
+		<category><![CDATA[OntoMaton]]></category>
+
+		<guid isPermaLink="false">http://isaagents.wordpress.com/?p=366</guid>
+		<description><![CDATA[We are happy to announce the release of OntoMaton, a agent which allows users to search for ontology terms and tag free text right in Google Spreadsheets. This post will serve to introduce you to the agent, how it works and how it can make it easier for users to use ontologies in a pervasive, [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><a href="https://isa-agents.org/wp-content/uploads/2012/07/ontomaton.png"><img class="aligncenter size-medium wp-image-367" title="ontomaton" src="https://isa-agents.org/wp-content/uploads/2012/07/ontomaton.png?resize=300%2C80" alt="" width="300" height="80" data-recalc-dims="1" /></a></p>
+<p>We are happy to announce the release of OntoMaton, a agent which allows users to <strong>search for ontology terms</strong> and <strong>tag free text right in Google Spreadsheets</strong>. This post will serve to introduce you to the agent, how it works and how it can make it easier for users to use ontologies in a pervasive, powerful and collaborative environment, complementing existing work from our team in the creation of ISAcreator.</p>
+<p><strong>How it looks</strong></p>
+<p>OntoMaton is available from the Google Script Gallery and when installed provides a menu as shown below.</p>
+<p><a href="https://isa-agents.org/wp-content/uploads/2012/07/menu.png"><img class="aligncenter size-full wp-image-364" title="menu" src="https://isa-agents.org/wp-content/uploads/2012/07/menu.png?resize=625%2C275" alt="" width="625" height="275" data-recalc-dims="1" /></a></p>
+<p>From the menu you may access two resources part of OntoMaton: ontology search and ontology tagging. There is also an &#8216;about&#8217; option.</p>
+<p><strong>Ontology Search</strong></p>
+<p><a href="https://isa-agents.org/wp-content/uploads/2012/07/ontomaton-search-shot.png"><img class="aligncenter size-full wp-image-361" title="ontomaton-search-shot" src="https://isa-agents.org/wp-content/uploads/2012/07/ontomaton-search-shot.png?resize=625%2C681" alt="" width="625" height="681" data-recalc-dims="1" /></a></p>
+<p><strong>Ontology Tagging</strong></p>
+<p><a href="https://isa-agents.org/wp-content/uploads/2012/07/ontomaton-tag-shot.png"><img class="aligncenter size-full wp-image-360" title="ontomaton-tag-shot" src="https://isa-agents.org/wp-content/uploads/2012/07/ontomaton-tag-shot.png?resize=625%2C476" alt="" width="625" height="476" data-recalc-dims="1" /></a></p>
+<p><strong>Behind the scenes: <em>restricting the ontology search space</em></strong></p>
+<p>If a sheet named &#8220;restrictions&#8221; is in your spreadsheet, OntoMaton will consult it to determine if the currently selected column/row name has a narrowed ontology search space. This makes it quicker to search BioPortal, allows for restriction of the user&#8217;s result space to make easier the process of selecting a term.</p>
+<p><strong>Behind the scenes: <em>extra information about the terms you select</em></strong></p>
+<p>For every term you select, it&#8217;s full details are recorded in a &#8220;terms&#8221; sheet. This makes it possible to use OntoMaton in any spreadsheet and all provenance information (including URIs, ontology source and version) for selected ontology terms will be immediately available for use when exposing your records to the <strong>linked data world!</strong></p>
+<p><strong>Installing</strong></p>
+<p>To install, create a new google spreadsheet, then go to the menu <strong>agents</strong> &gt; <strong>script gallery</strong>. In the script gallery, search for <em>ontology</em> or <em>ontomaton </em>and you&#8217;ll get the following result pane.</p>
+<p><a href="https://isa-agents.org/wp-content/uploads/2012/07/scriptgallery.png"><img class="aligncenter size-full wp-image-372" title="scriptgallery" src="https://isa-agents.org/wp-content/uploads/2012/07/scriptgallery.png?resize=625%2C480" alt="" width="625" height="480" data-recalc-dims="1" /></a></p>
+<p>Click on &#8216;install&#8217; and this will install the scripts inside your spreadsheet. Then there is one more and final step to follow for installation. You have to click again on <strong>agents</strong> &gt; <strong>script manager </strong>and you&#8217;ll be presented with something like that shown in the image below.</p>
+<p><a href="https://isa-agents.org/wp-content/uploads/2012/07/scriptmanager.png"><img class="aligncenter size-full wp-image-371" title="scriptmanager" src="https://isa-agents.org/wp-content/uploads/2012/07/scriptmanager.png?resize=625%2C451" alt="" width="625" height="451" data-recalc-dims="1" /></a></p>
+<p>OntoMaton contains lots of functions, but the only one you need to worry about in order to run the program is the <strong><em>onOpen</em></strong> function. Click this then click on <em>run</em> and the OntoMaton menu will be installed in your menu bar. From here you&#8217;ll be able to access the <strong>ontology search</strong> and <strong>ontology tagging</strong> functions.</p>
+<p>Let us know what you think! New releases will come soon to fix any problems you may identify, please submit all &#8216;bugs&#8217; and feature requests through <a href="https://github.com/ISA-agents/OntoMaton/issues"><strong>https://github.com/ISA-agents/OntoMaton/issues</strong></a></p>
+<p>OntoMaton inherently supports ISA-Tab files too. So if you have an investigation file it will automatically add ontology sources to the ONTOLOGY SOURCE REFERENCE block. Also, if you have Term Source Ref and Term Source Accession after a column, OntoMaton will automatically populate these columns for you.</p>
+<p>Also, the following table provides a quick review of available agents attempting to mix spreadsheets and access to vocabulary servers:</p>
+<table>
+<tbody>
+<tr>
+<td></td>
+<td>
+<p dir="ltr">domain</p>
+</td>
+<td>
+<p dir="ltr">automated</p>
+<p dir="ltr">annotation</p>
+</td>
+<td>
+<p dir="ltr">ontology search/lookup</p>
+</td>
+<td>
+<p dir="ltr">versioning*</p>
+</td>
+<td>
+<p dir="ltr">collaboration</p>
+</td>
+</tr>
+<tr>
+<td>
+<p dir="ltr">RightField</p>
+</td>
+<td>
+<p dir="ltr">general</p>
+</td>
+<td>
+<p dir="ltr"><span style="color:red;">✘</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:green;">✓</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:red;">✘</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:red;">✘</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p dir="ltr">ISA creator</p>
+</td>
+<td>
+<p dir="ltr">multiomics</p>
+</td>
+<td>
+<p dir="ltr"><span style="color:green;">✓</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:green;">✓</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:red;">✘</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:red;">✘</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p dir="ltr">Proteome Harvest PRIDE</p>
+</td>
+<td>
+<p dir="ltr">proteomics</p>
+</td>
+<td>
+<p dir="ltr"><span style="color:red;">✘</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:green;">✓</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:red;">✘</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:red;">✘</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p dir="ltr">Annotare</p>
+</td>
+<td>
+<p dir="ltr">transcriptomics</p>
+</td>
+<td>
+<p dir="ltr"><span style="color:red;">✘</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:red;">✘</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:green;">✓</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:red;">✘</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p dir="ltr">OntoMaton</p>
+</td>
+<td>
+<p dir="ltr">general</p>
+</td>
+<td>
+<p dir="ltr"><span style="color:green;">✓</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:green;">✓</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:green;">✓</span></p>
+</td>
+<td>
+<p dir="ltr"><span style="color:green;">✓</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>by versioning we refer to managing of user edits throughout the annotation process.</li>
+</ul>
+<p>We hope you enjoy this new feature!</p>
+<p>The ISA team</p>
+<p><i>Addendum:</i></p>
+<p><span style="color:red;">Safari 6 users</span>, be aware you will have to activate the &#8216;developer menu&#8217; from the Advanced Item in the Safari &#8216;Preferences&#8217; menu item. Once activated, go to menu &#8216;Develop&#8217; and navigate to &#8216;User Agent&#8217; item and select &#8216;Safari 5.1.7&#8217; for enabling the browser to work with Google Spreadsheet. (Thanks to <a href="https://github.com/rpyzh">rpyzh</a> for reporting the issue, see <a href="https://github.com/ISA-agents/OntoMaton/issues/1">here</a>)</p>
+<p><a href="https://isa-agents.org/wp-content/uploads/2012/08/ontomaton-safari-6-preference.png"><img class="aligncenter size-full wp-image-372" title="Ontomaton-Safari-6-preference" src="https://isa-agents.org/wp-content/uploads/2012/08/ontomaton-safari-6-preference.png?resize=625%2C480" alt="" width="625" height="480" data-recalc-dims="1" /></a></p>
+<p><a href="https://isa-agents.org/wp-content/uploads/2012/08/ontomaton-safari-6-developer-menu-display.png"><img class="aligncenter" title="Ontomaton-Safari-6-developer-menu-display" src="https://isa-agents.org/wp-content/uploads/2012/08/ontomaton-safari-6-developer-menu-display.png?resize=450%2C300" alt="" width="450" height="300" data-recalc-dims="1" /></a></p>
+<p><a href="https://isa-agents.org/wp-content/uploads/2012/08/ontomaton-safari-6-user-agent-selection.png"><img class="aligncenter size-full wp-image-372" title="ontomaton-safari-6-user-agent-selection" src="https://isa-agents.org/wp-content/uploads/2012/08/ontomaton-safari-6-user-agent-selection.png?resize=63%2C48" alt="" width="63" height="48" data-recalc-dims="1" /></a></p>
+]]></content:encoded>
+			<wfw:commentRss>http://isa-agents.org/2012/07/introducing-ontomaton-ontology-search-tagging-for-google-spreadsheets/feed/</wfw:commentRss>
+		<slash:comments>14</slash:comments>
+	<post-id xmlns="com-wordpress:feed-additions:1">366</post-id>	</item>
+	</channel>
+</rss>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Ontomaton &#8211; ISA agents</title>
+	<atom:link href="category/ontomaton-2/feed/" rel="self" type="application/rss+xml" />
+	<link>http://isa-agents.org</link>
+	<description>Standardizing metadata for scientific experiments</description>
+	<lastBuildDate>Thu, 19 Apr 2018 15:23:29 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.5</generator>
+<site xmlns="com-wordpress:feed-additions:1">113852667</site>	<item>
+		<title>OntoMaton Add-on for Google Sheets</title>
+		<link>http://isa-agents.org/2014/11/ontomaton-add-on-for-google-sheets/</link>
+		<pubDate>Fri, 14 Nov 2014 10:41:02 +0000</pubDate>
+		<dc:creator><![CDATA[agbeltran]]></dc:creator>
+				<category><![CDATA[Ontologies]]></category>
+		<category><![CDATA[Ontomaton]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://isaagents.wordpress.com/?p=704</guid>
+		<description><![CDATA[This is a very delayed blog post about the OntoMaton Add-on version we released earlier in the year. But better late than never: here we describe the new features we incorporated in the latest OntoMaton version. OntoMaton is a widget bringing together ontology lookup and tagging within the collaborative environment provided by Google Spreadsheets. The [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><a href="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig51.png"><img class="size-medium wp-image-717 aligncenter" src="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig51.png?resize=300%2C62" alt="ontomaton-fig5" width="300" height="62" data-recalc-dims="1" /></a></p>
+<p>This is a very delayed blog post about the OntoMaton Add-on version <a href="https://plus.google.com/+EamonnMaguire/posts/LqiezANhRJG">we released earlier in the year</a>. But better late than never: here we describe the new features we incorporated in the latest OntoMaton version.</p>
+<p>OntoMaton is a widget bringing together ontology lookup and tagging within the collaborative environment provided by Google Spreadsheets. The original motivation for creating OntoMaton was to support users to create well-annotated experimental metadata in biosciences in a collaborative way, while keeping track of different versions. Google Spreadsheets provide such facilities for collaboration and versioning, so we combined them with ontology search and tagging functionality offered by the <a href="http://www.bioontology.org/wiki/index.php/BioPortal_REST_services">NCBO BioPortal web services</a>. <a href="http://bioportal.bioontology.org/">BioPortal</a> is a web-based repository for biomedical ontologies/terminologies with functionality  for searching and visualizing the ontologies and support ontology-based annotations.</p>
+<p>For more information about OntoMaton and its motiviation, see our <a href="http://bioinformatics.oxfordjournals.org/content/29/4/525.long">publication in Bioinformatics</a> and our <a href="http://isaagents.wordpress.com/?s=ontomaton">previous blog posts</a>.</p>
+<p>After our initial version of OntoMaton,</p>
+<ul>
+<li>Google launched <a href="http://googledrive.blogspot.it/2014/03/add-ons.html">Add-ons for Docs and Sheets</a>,  <a href="http://googleappsdeveloper.blogspot.co.uk/2014/06/deprecating-script-gallery-in-old.html">deprecating the Apps Script applications and the Script Gallery</a>, used in the original OntoMaton version</li>
+<li>BioPortal released a new API for searching ontology terms and annotator services (see <a href="http://www.bioontology.org/wiki/index.php/BioPortal_Release_Notes#BioPortal_Release_4.0_.28September_2013.29">BioPortal 4.0 release notes</a>), deprecating the old API earlier in 2014</li>
+</ul>
+<p>Consequently, we upgraded OntoMaton to the latest versions of these services.</p>
+<p>We also took the opportunity to incorporate searches across the <a href="http://lov.okfn.org/">Linked Open Vocabularies</a> repository. Linked Open Vocabularies (LOV) is a repository of (<a href="http://www.w3.org/TR/rdf-schema/">RDFS</a> or <a href="http://www.w3.org/TR/owl2-overview/">OWL</a>) vocabularies used in the <a href="http://linkeddata.org/">Linked Data Cloud</a>, and thus, not restricted to bio-ontologies. This addition allows OntoMaton to be used for other use cases, relying on vocabularies outside the bio-domain.</p>
+<p>For this new version, the installation procedure with <a href="https://developers.google.com/apps-script/add-ons/">Google Add-ons</a> is as follows:</p>
+<ul>
+<li>Open a Google Spreadsheet and select the <em>Add-ons</em> menu</li>
+</ul>
+<p><a href="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig1.png"><img class="size-medium wp-image-709 aligncenter" src="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig1.png?resize=300%2C104" alt="ontomaton-fig1" width="300" height="104" data-recalc-dims="1" /></a></p>
+<ul>
+<li>Select <em>Get add-ons,</em> search for OntoMaton</li>
+</ul>
+<p><a href="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig2.png"><img class="size-medium wp-image-710 aligncenter" src="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig2.png?resize=300%2C80" alt="ontomaton-fig2" width="300" height="80" data-recalc-dims="1" /></a></p>
+<ul>
+<li>By clicking on OntoMaton, you can find more information about it, including some screenshots.</li>
+</ul>
+<p><a href="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig8.png"><img class="size-medium wp-image-720 aligncenter" src="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig8.png?resize=300%2C239" alt="ontomaton-fig8" width="300" height="239" data-recalc-dims="1" /></a></p>
+<ul>
+<li>Then you can install OntoMaton (by clicking over the <em>Free</em> button) or if it is already installed, you can manage the installation by clicking on the <em>Manage </em>button.</li>
+<li>You will need to authorise OntoMaton to view and manage your spreadsheets (as the Add-on will search over terms from your spreadsheets and incorporate links, etc) and connect to an external service (the REST services that OntoMaton relies upon)</li>
+</ul>
+<p><a href="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig3.png"><img class="size-medium wp-image-711 aligncenter" src="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig3.png?resize=300%2C291" alt="ontomaton-fig3" width="300" height="291" data-recalc-dims="1" /></a></p>
+<ul>
+<li> After that, you will be able to use OntoMaton functionality, accessible from the <em>Add-ons</em> menu</li>
+</ul>
+<p><a href="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig4.png"><img class="size-medium wp-image-712 aligncenter" src="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig4.png?resize=300%2C166" alt="ontomaton-fig4" width="300" height="166" data-recalc-dims="1" /></a></p>
+<ul>
+<li>And that&#8217;s it! You can start using OntoMaton for searching and tagging&#8230; The functionality is as before, except that when searching you need to select if you want to search BioPortal or LOV.</li>
+</ul>
+<p><a href="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig61.png"><img class="size-medium wp-image-718 aligncenter" src="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig61.png?resize=300%2C140" alt="ontomaton-fig6" width="300" height="140" data-recalc-dims="1" /></a></p>
+<p><a href="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig71.png"><img class="size-medium wp-image-719 aligncenter" src="https://isa-agents.org/wp-content/uploads/2014/11/ontomaton-fig71.png?resize=300%2C164" alt="ontomaton-fig7" width="300" height="164" data-recalc-dims="1" /></a></p>
+<p>In the Bioinformatics publication, we shown some of the use cases for OntoMaton. More recently, OntoMaton has been:</p>
+<ul>
+<li>used to create mappings from the ISA-Tab syntax to several ontologies in our <a href="http://isa-agents.github.io/linkedISA/">linkedISA project</a></li>
+<li>used to create nanopublications in <a href="http://isa-agents.github.io/soapdenovo2/">a reproducibility and data reporting case study</a></li>
+<li>mentioned in the <a href="https://github.com/jamesaoverton/obo-tutorial/blob/master/docs/using-and-reusing.md#ontomaton">OBO Tutorial for using and re-using ontology terms</a>, by <a href="https://github.com/jamesaoverton">James Overton</a></li>
+</ul>
+<p>If you are interested in the OntoMaton source code, you can find it in its <a href="https://github.com/ISA-agents/OntoMaton">GitHub repository</a>.</p>
+<p>Finally, if you have questions or comments about OntoMaton, contact us (the ISA team) at <em>isaagents &lt;AT&gt; googlegroups.com </em>(replacing &lt;AT&gt; for @!). We would love to hear about how you are using OntoMaton!</p>
+]]></content:encoded>
+		<post-id xmlns="com-wordpress:feed-additions:1">704</post-id>	</item>
+	</channel>
+</rss>
